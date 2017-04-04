@@ -1,0 +1,747 @@
+<html>
+<head>
+<script type="text/javascript" src="tablesorter-master/jquery-latest.js"></script> 
+<script type="text/javascript" src="tablesorter-master/jquery.tablesorter.js"></script> 
+<!-- <link rel="stylesheet" href="tablesorter-master/themes/vrif/style.css" type="text/css" id="" media="print, projection, screen">
+-->
+<link rel="stylesheet" href="vrif-specification.css" type="text/css" id="" media="print, projection, screen">
+
+<link rel="stylesheet" href="tablesorter-vrif/style.css" type="text/css" id="" media="print, projection, screen">
+
+
+<style>
+table.lexKeyTable {
+	font-family: 'raleway', sans-serif;
+	background-color: #CDCDCD;
+	margin:10px 0pt 15px;
+	width: 100%;
+	text-align: left;
+}
+table.lexKeyTable thead tr th, table.lexKeyTable tfoot tr th {
+	background-color: #e6EEEE;
+	border: 1px solid #FFF;
+	padding: 4px;
+}
+table.lexKeyTable tbody td {
+	color: #3D3D3D;
+	padding: 4px; 
+	background-color: #FFF;
+	vertical-align: top;
+}
+
+table.lexTable tbody tr.hideMe {
+	display:none;
+}
+
+table.list {
+	font-family: 'Raleway', sans-serif;
+	background-color: #FFF;
+	margin:10px 0pt 15px;
+	width: 100%;
+	text-align: left;
+}
+table.list tr td:first-child {font-weight:bold;}
+</style>
+</head>
+<body>
+<script>
+$(document).ready(function() 
+    { 
+		$("#lexTable td:nth-child(3)").each(function () {
+			if ($(this).text() === "Concept" ) {
+				$(this).parent("tr").css("background-color", "#fff7a8"); /* R:255 G:247 B:168 */
+			}
+			if ($(this).text() === "Audio" ) {
+				$(this).parent("tr").css("background-color", "#ffc000"); /* R:255 G:192 B:0 */
+			}
+			if ($(this).text() === "Camera" ) {
+				$(this).parent("tr").css("background-color", "#8ea8db"); /* R:142 G:168 B:219 */
+			}
+			if ($(this).text() === "Display" ) {
+				$(this).parent("tr").css("background-color", "#e2efda"); /* R:226 G:239 B:218 */
+			}
+			if ($(this).text() === "Interaction" ) {
+				$(this).parent("tr").css("background-color", "#c0e0b3"); /* R:197 G:224 B:179 */
+			}
+			if ($(this).text() === "Metric" ) {
+				$(this).parent("tr").css("background-color", "#f6befe"); /* R:246 G:190 B:254 */
+			}
+			if ($(this).text() === "Physiology" ) {
+				$(this).parent("tr").css("background-color", "#fff2cc"); /* R:255 G:242 B:204 */
+			}
+			if ($(this).text() === "Sensor" ) {
+				$(this).parent("tr").css("background-color", "#ffe8a9"); /* R:255 G:232 B:169 */
+			}
+			if ($(this).text() === "Software" ) {
+				$(this).parent("tr").css("background-color", "#e2efda"); /* R:226 G:239 B:218 */
+			}
+			if ($(this).text() === "Technology" ) {
+				$(this).parent("tr").css("background-color", "#ffc7ce"); /* R:255 G:199 B:206 */
+			}
+			if ($(this).text() === "Video" ) {
+				$(this).parent("tr").css("background-color", "#c7fbfe"); /* R:199 G:251 B:254 */
+			}
+		});
+
+	<!-- http://tablesorter.com/docs/ -->
+        $("#lexTable").tablesorter( {
+			sortList: [[0,0], [1,0]],
+			headers: { 3: {sorter: false} }
+		} ); 
+		
+		$("#lexTable").bind("sortStart",function() { 
+			<!-- sort starting --> 
+		}).bind("sortEnd",function() { 
+			<!-- sort done -->
+			
+		}); 
+    } 
+); 
+</script>
+
+<table><tr><td><img src="VR-Industry Forum-logo.png" height="80"/>
+</td>
+
+<td><h1>This lexicon of terms applies to the fields of virtual reality (VR), augmented reality (AR), mixed reality (MR), and 360-degree video.</h1></td>
+</tr></table>
+
+<h2>The list of terms is organized as follows</h2>
+
+<table class="list">
+<tr><td>Term</td><td>Word or phrase</td></tr>
+<tr><td>Acronym</td><td>Abbreviated form of the term (including initialisms).</td></tr>
+<tr><td>Category</td><td>Classification of the term. (See list below.) This is intended to categorize the list and make it possible to select subsets of the list applicable to different needs. Entries are color-coded by category.</td></tr>
+<tr><td>Definition</td><td>Meaning and use of the term.</td></tr>
+<tr><td>Workflow</td><td>Categorization of the phase(s) of ecosystem workflow the term is most relevant to. (See list below.)</td></tr>
+</table>
+
+<h2>There are two taxonomies: general category and workflow (usage). The list is color-coded by category.</h2>
+
+<table class="lexKeyTable">
+<thead><tr><th colspan="2">Category</th></tr></thead>
+<tbody>
+<tr><td style="background-color: #fff7a8"><b>Concept</b></td><td>High-level notion or abstract idea.</td></tr>
+<tr><td style="background-color: #ffc000"><b>Audio</b></td><td>Technology or device specifically related to audio.</td></tr>
+<tr><td style="background-color: #8ea8db"><b>Camera</b></td><td>Video or audio capture device, or associated optical or aural system.</td></tr>
+<tr><td style="background-color: #e2efda"><b>Display</b></td><td>Technology or device that presents video (and audio) to a user.</td></tr>
+<tr><td style="background-color: #c0e0b3"><b>Interaction</b></td><td>System or technique enabling a user to interact and control a simulated environment.</td></tr>
+<tr><td style="background-color: #f6befe"><b>Metric</b></td><td>A system, unit, or frame of reference for measurement.</td></tr>
+<tr><td style="background-color: #fff2cc"><b>Physiology</b></td><td>A human factor or human response.</td></tr>
+<tr><td style="background-color: #ffe8a9"><b>Sensor</b></td><td>A device for tracking motion or position. (Excludes devices for capturing video, audio, or morphology.)</td></tr>
+<tr><td style="background-color: #e2efda"><b>Software</b></td><td>Computer application or software library.</td></tr>
+<tr><td style="background-color: #ffc7ce"><b>Technology</b></td><td>General technical knowledge or its application.</td></tr>
+<tr><td style="background-color: #c7fbfe"><b>Video</b></td><td>Technology or device specifically related to video.</td></tr>
+</tbody>
+</table>
+<br/>
+<table class="lexKeyTable">
+<thead><tr><th colspan="2">Workflow</th></tr></thead>
+<tbody>
+<tr><td><b>Capture</b></td><td>Convert an input signal into digital format. Includes cameras, microphones, sensors, and real-time video stitching.</td></tr>
+<tr><td><b>Produce</b></td><td>Combine and manipulate captured and generated media elements into a desired final form. Includes data conversion, post-production, stitching, pre-rendering, 3D mapping, planar projection, editing, and QC.</td></tr>
+<tr><td><b>Encode</b></td><td>Convert digital media into a compressed format intended for distribution and playback. Includes transcoding, multiplexing, DRM license generation, and encryption.</td></tr>
+<tr><td><b>Distribute</b></td><td>Deliver encoded digital media to end devices, typically by streaming or downloading over the Internet. Includes storage, CDN, streaming, download, and broadcast.</td></tr>
+<tr><td><b>Decode</b></td><td>Decompress and convert encoded digital media into a form ready for rendering and playback. Includes DRM license verification and decryption.</td></tr>
+<tr><td><b>Render</b></td><td>Generate an audio and video image in real time. Includes compositing from multiple sources, rendering audio and rasterizing video from 2D or 3D models, and extracting an image for a point of view.</td></tr>
+<tr><td><b>Display</b></td><td>Present audio and video using devices such as audio headsets, video screens, and video projection. Includes HMD, HUD, and light-field display.</td></tr>
+<tr><td><b>Interact</b></td><td>Control and affect an audio, visual, and possibly tactile experience using methods such as body motion, speaking, and manipulating input devices. Includes user input, latency.</td></tr>
+<tr><td><b>Experience</b></td><td>Perceive and participate in an environment that augments or overrides human senses and responds to human input. Includes physiology, user acceptance, haptics, and other human factors.</td></tr>
+</tbody>
+</table>
+
+
+
+<table id="lexTable" class="tablesorter lexTable"> 
+<thead>
+<tr class="lexHead">
+<th>Term</th><th>Acronym</th><th>Category</th><th>Definition</th><th>Workflow</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>360° video</td><td></td><td>Concept</td><td>Also known as spherical video, 360° video refers to capturing a very wide field of view (between a hemisphere and a full sphere), usually with multiple lenses whose independent streams are merged through the process of stitching. A key characteristic of 360° video is that it is usually intended to be viewed on a display device such as a tablet or HMD that shows only a subset of the panorama, the selection of which is normally governed by head tracking or device orientation to create an immersive experience. The viewing experience has three degrees of freedom — although the user can control where they look, they have no control over the positioning of the camera. See Panoramic single-view video and Panoramic stereoscopic video.</td><td>Capture, Render</td>
+</tr>
+<tr>
+<td>3D cursor</td><td></td><td class="lexInteraction">Interaction</td><td>A direct interaction technique based on a 3D cursor which position is mapped according to the user hand according to a linear or non-linear mapping (go-go technique)</td><td>Interact</td>
+</tr>
+<tr>
+<td>3D motion tracking</td><td></td><td>Technology</td><td>Process of determining from 2D image sequences the motion of objects or of the camera in the 3D real space. Knowing the pose of objects or of the camera in a given coordinate system of the real space for the first image of the sequence provides with their 3D pose for each image of the sequence (3D pose estimation).</td><td>Capture</td>
+</tr>
+<tr>
+<td>3D pose estimation</td><td></td><td>Technology</td><td>Determining from a sequence of 2D images acquired by a vision device (camera, depth sensor) the 3D transformations or pose (position and orientation) of real objects or of the camera in a given coordinate system from the real space.</td><td>Capture</td>
+</tr>
+<tr>
+<td>Accelerometer</td><td></td><td>Sensor</td><td>A device for detecting acceleration. Usually implemented by sensing change in velocity in the x, y, and z directions relative to some frame of reference (e.g., the object itself or a cubic volume in room-scale VR) to generate an acceleration vector. Found in smartphones and HMDs.</td><td>	Capture, Interact</td>
+</tr>
+<tr>
+<td>Accommodation</td><td></td><td>Physiology</td><td>The ability of a person to focus on objects at different distances. This declines with age, the end stage of which is a condition known as presbyopia.</td><td>Experience</td>
+</tr>
+<tr>
+<td>Ambisonics</td><td></td><td>Audio</td><td>A system for encoding directional information in a 3D sound field by capturing x-, y-, z-, and omnidirectional components using special microphones. This allows a soundfield to localized when rendered through (e.g.) headphones to match the FOV being displayed on an HMD. Developed in the 1970's in the UK.</td><td>Encode</td>
+</tr>
+<tr>
+<td>Analytics</td><td></td><td>Technology</td><td>In a VR context, analytics is employed to extract insights and construct visualizations such as heat maps, that are based on the input streams received from the user, specifically the position of the HMD, which can be used to infer (approximately) which elements of a VR scene the user is interacting with at a given instant in time.</td><td>Interact</td>
+</tr>
+<tr>
+<td>Astigmatism</td><td></td><td>Physiology</td><td>A type of optical aberration that prevents a person from keeping the entirety of an object in focus at one time, even if all parts are the same distance away. A common manifestation is only being able to focus on the horizontal or vertical arm of a cross (but not both) at the same time. It is an issue with HMDs that don't work with prescription eyeglasses, as there is no simple correction for astigmatism.</td><td>Experience</td>
+</tr>
+<tr>
+<td>Asynchronous time warp</td><td>ATW</td><td>Technology</td><td>A technique for masking video artifacts caused when the next frame has not finished being rendered at the end of the current frame. Without ATW, this will result in the current frame appearing twice, which the user perceives as a video glitch that undermines immersiveness. With ATW, if the next frame isn't ready the current frame will be warped (affine transform) to approximate the next frame (assuming the scene hasn't changed and the head motion is relatively small). This has been shown to mask the users perception of video glitches in many cases, though success is not guaranteed.</td><td>	Render</td>
+</tr>
+<tr>
+<td>Augmented reality</td><td>AR</td><td>Concept</td><td>The inclusion of synthetic objects into a user's live or indirect real-world environment. This includes a spectrum of capability, progressing from a simple overlay (e.g. in a HUD), to simulating partial occlusion of synthetic and real imagery, to full global illumination (e.g. light reflecting from the synthetic objects affects real objects, and vice versa) and audio integration with sound-cancellation techniques. In its most advanced form, AR is more challenging than VR because of the requirement to seamlessly blend real and synthetic objects.</td><td>Render</td>
+</tr>
+<tr>
+<td>Autostereoscopic display</td><td></td><td>Display</td><td>The ability to reproduce stereoscopic images without requiring the user to wear special gear.</td><td>Display</td>
+</tr>
+<tr>
+<td>Avatar</td><td></td><td>Concept</td><td>A representation of a person inside a virtual environment It may or may not be based on how a person actually looks. In many MMORPG's, an avatar is chosen from a list, or is a graphical representation derived from a photograph.</td><td>Experience</td>
+</tr>
+<tr>
+<td>Beam-splitter</td><td></td><td>Camera</td><td>A system for splitting a beam of light. It can be used to dynamically change the interaxial distance in a system of lenses.</td><td>Capture</td>
+</tr>
+<tr>
+<td>Binaural microphones</td><td></td><td>Audio</td><td>A pair of microphones to be placed in or near the ears to capture a sound field as perceived by a person.</td><td>	Capture</td>
+</tr>
+<tr>
+<td>Binaural Rendering</td><td></td><td>Audio</td><td>Concept of processing audio signals for headphone reproduction. Binaural rendering mimics the source transmission from a point in space to the ears of users. It can be used for presentation of immersive audio material over headphones maintainung spatial cues. Binaural rendering is part of the MPEG-H 3D Audio standard.</td><td>Render</td>
+</tr>
+<tr>
+<td>Binocular rivalry</td><td></td><td>Physiology</td><td>An uncomfortable ocular effect that appears when parts of objects in negative parallax are clipped by the edge of the stereoscopic display, causing parts of objects that should be visible by both eyes but that are visible by only one eye due to display edge clipping.</td><td>Experience</td>
+</tr>
+<tr>
+<td>Bullet time</td><td></td><td>Concept</td><td>Extreme slow motion. The phrase originated from the 1999 film "The Matrix".</td><td>Produce</td>
+</tr>
+<tr>
+<td>Calibration</td><td></td><td>Technology</td><td> </td><td> </td>
+</tr>
+<tr>
+</tr>
+<tr>
+<td>Camera array</td><td></td><td>Camera</td><td>A set of cameras that are mounted in a harness to assume fixed positions relative to each other. Depending on the camera geometry, the array may be used to capture parallax (stereo), 360° video, or a lightfield.</td><td>Capture</td>
+</tr>
+<tr>
+<td>Camera rig</td><td></td><td>Camera</td><td>A piece of equipment to which a camera is attached when used for professional image capture.</td><td>Capture</td>
+</tr>
+<tr>
+<td>CG VR</td><td> </td><td>Concept</td><td> </td><td> </td>
+</tr>
+<tr>
+</td><td>Chromatic aberration</td><td></td><td>Physiology</td><td>A class of visual artifacts caused by light with longer wavelengths being refracted less strongly than light with shorter wavelengths. HMDs containing lenses will cause severe chromatic aberration unless corrected by applying the inverse amount of aberration to the image displayed.</td><td>Experience</td>
+</tr>
+<tr>
+</td><td>Cinematic VR</td><td></td><td>Concept</td><td></td><td>Produce</td>
+</tr>
+<tr>
+</td><td>Codec</td><td></td><td>Technology</td><td>A contraction of "code" and "decode", codec refers to a pair of complementary transforms applied to a stream of digital data. Codecs can achieve many goals, but the primary one in a VR context is to compress the data. For example, H.264 is a video codec that supports coding an uncompressed video stream for more bit-efficient transport, and decoding it in a playback device for display.</td><td>Encode, Decode</td>
+</tr>
+<tr>
+<td>Compositing</td><td></td><td>Technology</td><td>The process of combining visual or aural elements from separate sources into a single image or sound field. Generally requires a registration process for good alignment.</td><td>Produce</td>
+</tr>
+<tr>
+<td>Computer-generated imagery</td><td>CGI</td><td>Video</td><td>A large class of software and hardware systems that support the creation of realistic imagery based on an internal model that captures both the geometry and lighting attributes of an object (that may or may not exist in reality).</td><td>Produce, Render</td>
+</tr>
+<tr>
+<td>Cube map</td><td></td><td>Video</td><td>A format for 360° video that is based on projecting a spherical image onto the faces of a surrounding cube . This is usually represented as a cross-shape (3x4 or 2x3 rectangles ) created by unrolling 4 parallel faces into the same plane, and then folding down the remaining two faces into that plane to form the arms of the cross. Compared to equirectangular, cube maps exhibit less distortion but are more complex to store and render owning to the non-rectangular shape and discontinuities at the edges.</td><td>Produce</td>
+</tr>
+<tr>
+<td>CUDA</td><td></td><td>Technology</td><td>Originally an acronym for (Compute Unified Device Architecture), CUDA is an API that abstracts the capabilities of parallel computing hardwware such as GPUs. This simplifies the development of algorithms and provides a degree of device independence.</td><td>Render</td>
+</tr>
+<tr>
+<td>Data glove</td><td></td><td>Sensor</td><td>An input device that is worn like a glove and records the relative positions of the fingers.</td><td>Interact</td>
+</tr>
+<tr>
+<td>Degree of freedom</td><td>DOF</td><td>Metric</td><td>Refers to the freedom of movment of a rigid body in a three dimensional space. It is categorized by the independent translation and rotation of the x-, y-, and z-axes. Thus the most flexible system is often referred to as six degrees of freedeom. This term is commonly applied to camera mounting systems, e.g. on drones.</td><td>Capture, Render</td>
+</tr>
+<tr>
+<td>Depth image-based rendering</td><td>DIBR</td><td>Technology</td><td>A family of techniques for synthesizing a view of a scene (i.e. from a position not captured by a camera) based on one or more reference images that include depth information for each pixel site. A central problem of DIBR is that of disocclusion: the synthesized image may include regions now exposed to view that were not captured in the reference image(s). A variety of methods exist for estimating pixel values for those regions based on localized information and the depth values.</td><td>Render</td>
+</tr>
+<tr>
+<td>Depth of field</td><td>DOF</td><td>Metric</td><td>In an optical system, the range between the nearest and farthest objects that are in focus. The Depth of Field is positively correlated with the f-stop (higher f-stop results in greater DOF).</td><td>Capture, Render</td>
+</tr>
+<tr>
+<td>Diegetic Sound</td><td></td><td>Concept</td><td>Sound elements that are understood to originate from within a scene being depicted in a cinematic, theatrical, or VR experience. They may be off-screen, but if so would be audible to the characters in the scene. Dialog spoken by a character would be an example of Diegetic Sound. Conversely, sound track music heard only by the audience would be an example of non-Diegetic sound. Also known as "Diegetic Audio" or "Source Music".</td><td>Produce</td>
+</tr>
+<tr>
+<td>Diopter</td><td></td><td>Physiology</td><td>A measurement of how strongly a lens bends light.</td><td>Capture</td>
+</tr>
+<tr>
+<td>Direct Mode</td><td></td><td>Technology</td><td>Driver technology that allows an HMD to be treated as an independent display that VR applications can render directly to. Normally all displays attached to a PC are assumed to be part of a larger virtual display; this is undesirable because having the window system involved is a source of avoidable latency.</td><td>Display</td>
+</tr>
+<tr>
+<td>Direct3D</td><td>D3D</td><td>Software</td><td>A low-level 3D graphics rendering library, created by Microsoft for Windows platforms.</td><td>Render</td>
+</tr>
+<tr>
+<td>Dome cinemas</td><td></td><td>Display</td><td>A system for projecting video onto a spherical or hemispherical screen that is viewed from the inside. It is suitable for projecting 360° video but has no motion tracking capability.</td><td>Display</td>
+</tr>
+<tr>
+<td>Double buffering</td><td></td><td>Technology</td><td>A technique for masking video artifacts (e.g. tearing) by supporting two independent frame buffers. One contains the currently displayed buffer, and the other (not visible) is drawn into to create the next image. At the end of the current frame time the buffers are swapped and the cycle begins anew.</td><td>Display</td>
+</tr>
+<tr>
+<td>Equirectangular</td><td></td><td>Video</td><td>A format for 360° video that is based on projecting a spherical image onto a surrounding cylinder (similar to a Mercator projection in cartography). The benefit of the format is the cylinder can be represented as a rectangle, allowing reuse of existing rectangle-based video codecs. The principle disadvantage is that more pixels are used to represent polar regions, which typically contain the least interesting content to the viewer (e.g. sky, ground).</td><td>Produce</td>
+</tr>
+<tr>
+<td>Eye tracking</td><td></td><td>Technology</td><td>(See Gaze tracking)</td><td>Interact</td>
+</tr>
+<tr>
+<td>f-stop</td><td>f/n</td><td>Metric</td><td>The f-stop is the ratio between the focal length and the diameter of the aperture through which light enters the lens.	</td><td>Capture</td>
+</tr>
+<tr>
+<td>Field of view</td><td>FOV</td><td>Metric</td><td>The angle formed by the left and right edges of the viewing area of an HMD. There is a tradeoff between the Field of View (higher is better) and Resolution (which is inversely proportional).</td><td>Display</td>
+</tr>
+<tr>
+<td>First-person View</td><td>FPV</td><td>Concept</td><td>A view from the perspective of an individual, with the video and audio representing what a person would experience. Also refers to a method of remote control (e.g. of a vehicle, drone, etc.) where the control interface presents a view from the perspective of the device being controlled, often referred to as a Remote Person View (RPV).</td><td>Capture, Display</td>
+</tr>
+<tr>
+<td>Focal length</td><td></td><td>Metric</td><td>The distance (measured in millimeters) between the center of a lens and the point at which light entering a lens will converge</td><td>Capture</td>
+</tr>
+<tr>
+<td>Frame cancellation</td><td></td><td>Physiology</td><td>An uncomfortable ocular effect that appears when objects in negative parallax are clipped by the edge of the stereoscopic display, causing depth perception conflicts between occlusion and parallax cues: Objects are perceived behind the display plane as they are considered as occluded by its edges, while they are perceived in front of the display plane as their parallaxes are negative.</td><td>Experience</td>
+</tr>
+<tr>
+<td>Frames per second</td><td>FPS</td><td>Metric</td><td>In a video track, the rate at which frames are encoded. In a display system, the rate at which frames of video are presented to the user. The persistence of the video system determines what portion of a frame the image is actually visible. In VR systems, high frame rates (e.g. 90–120 Hz) are required to avoid motion sickness.</td><td>Display</td>
+</tr>
+<tr>
+<td>Free-viewpoint video</td><td></td><td>Display</td><td>A video that a user may view from an arbitrary position and direction By comparison, in a 360° video only the direction can be selected on playback; the location is determined by the camera at the moment that frame was captured.</td><td>Display</td>
+</tr>
+<tr>
+<td>Gamma correction</td><td>&gamma;</td><td>Metric</td><td>An empirical change to correct for the human visual system's non-linear response to changes in luminance.</td><td>Display</td>
+</tr>
+<tr>
+<td>Gaze tracking</td><td></td><td>Technology</td><td>Any of a variety of techniques for gathering detailed information on the movement of the eyes of a viewer while in an immersive VR experience. This is not the same as assuming the center of an HMD is always where a user is looking. The most common data collected are the direction vectors for each eye (known as pupillometry or gaze tracking), and small involuntary motions known as saccades. More sophisticated systems also may capture the diameter of the pupil, which can be indicative of ambient lighting or internal emotional state. Current HMDs do not have eye tracking capability, though this may change in the future. A few current HMDs can be retrofitted with eye tracking hardware.</td><td>Interact</td>
+</tr>
+<tr>
+<td>Global illumination</td><td></td><td>Video</td><td>In 3D graphics, global illumination seeks to realistically light a scene by accounting for not just direct light sources, but indirect lighting caused by objects recursively reflecting light between each other. These calculations are extremely compute intensive, and generally require ray-tracing techniques that can't be done in real-time, though GPUs help a great deal.</td><td>Produce</td>
+</tr>
+<tr>
+<td>Graphics Pipeline</td><td></td><td>Technology</td><td>A sequence of computational steps to create a raster graphics image from an internal 3D representation, including the following: transformation from local coordinate system to camera(s) coordinate system(s); camera projection of the elements of the 3D scene according to the intrinsic parameter; view frustum clipping; rasterization; texturing; lighting; fragment shading. On recent graphics hardware, some of these steps are implemented by programmable shaders, including: pixel or fragment shaders (relative to the pixel of the output raster image); vertex shaders (to modify properties relative to input 3D models' vertices); geometry shaders (to generate new primitives such as 3D points, lines, triangles, etc); tessellation shaders (to subdivide a mesh to generate on-the-fly levels of detail). User interactions, physics, and management of object behavior are not part of the rendering process. These computations update the scene graph in a pre-rendering step of a global loop. Although the distortion correction adapted to each HMD lens can be done through a dedicated pixel shaders, the time-warp process is done in a post-rendering step.</td><td>Render</td>
+</tr>
+<tr>
+<td>Graphics processing unit</td><td>GPU</td><td>Technology</td><td>A collection of processors that can speed up algorithms by performing computation in parallel. The computations are not independent but conform loosely to the SIMD (single-instruction multiple data) paradigm. Typically the same program (set of instructions) is performed independently by each GPU core, but the input parameters can vary programmatically by a series of iterators which can be used to index tabular arrays. GPUs were originally developed in 3D graphics accelerators to perform shading (per-pixel) calculations, but since then have evolved to be usable with a larger class of applications. GPUs are sometimes referred to as GPGPUs (general-purpose GPUs) when applied to non-graphics computations.</td><td>Render</td>
+</tr>
+<tr>
+<td>Gyroscope</td><td></td><td>Sensor</td><td>A class of device capable of detecting and measuring changes in the orientation (roll, pitch, and yaw) of an object. Originally implemented as a a rapidly spinning disk attached to a cage with three degrees of freedom of motion, new versions use long fiber loops and have no moving parts.</td><td>Interact</td>
+</tr>
+<tr>
+<td>Haptic</td><td></td><td>Concept</td><td>Literally, relating to the sense of touch. In a VR context. Refers to a class of input controllers that can provide programmatic feedback to a user, usually based on the location of the controller in the scene. Haptic feedback may be realistic (e.g. to simulate the physical effect of interacting with an object) or just to provide cues to the user that they should perform (or stop performing) an action when certain criteria are met.</td><td>Interact</td>
+</tr>
+<tr>
+<td>Head tracking</td><td></td><td>Sensor</td><td>A system for capturing the orientation of an HMD. This is not the same as gaze tracking. The HMD direction is needed to determine the viewport into a spherical image to display. In walk-around systems it is necessary to determine the location of the HMD as well as its orientation (see Positional head tracking).</td><td>Interact</td>
+</tr>
+<tr>
+<td>Head-mounted display</td><td>HMD</td><td>Display</td><td>A class of display device characterized by: high frame rate; high-resolution display; a lens system to make the display viewable to a person; and a head tracking system to report back the current orientation of the display.</td><td>Display</td>
+</tr>
+<tr>
+<td>Head-related transfer function</td><td>HRTF</td><td>Audio</td><td>The HRTF is measured at a spot near the entrance of each person's ear. It is parameterized by a direction (e.g. lat-long) and frequency; the value is the actual intensity of the sound received. The HRTF is required to produce binaural (spatially accurate) sound.</td><td>	Produce, Render</td>
+</tr>
+<tr>
+<td>Heads-up display</td><td>HUD</td><td>Display</td><td>A class of display device capable of overlaying text and graphical information in the users field of view. Google Glass is an example.</td><td>Display</td>
+</tr>
+<tr>
+<td>High dynamic range</td><td>HDR</td><td>Video</td><td>The ability to represent a large variation in the lightest and darkest areas of an image. Depending on context, HDR may refer to the capabilities of the image sensor, of the number bits used to represent intensity values, of functions mapping pixel values to intensity, or of the range of intensities an output device can reproduce. SMPTE has developed a family of HDR specifications; pixels are typically 10 bits or higher.</td><td>Capture, Display</td>
+</tr>
+<tr>
+<td>High-Efficiency Video Codec</td><td>HEVC</td><td>Video</td><td>A video compression standard that offers better coding efficiency compared to MPEG-2 or H.264. Also known as H.265.	</td><td>Encode</td>
+</tr>
+<tr>
+<td>High-order ambisonics</td><td>HOA</td><td>Audio</td><td>An enhancement to ambisonics that improves the size of the region over which a soundfield can be reproduced, but at the cost of encoding additional channels, which in turn require a larger array of microphones to capture.</td><td>Encode</td>
+</tr>
+<tr>
+<td>Holo-cinema	</td><td></td><td>Concept</td><td>A term coined by ILMxLAB to refer to a shared VR experience where multiple users are immersed into the same environment (often based on a movie franchise), are aware of each other, and can interact with the environment.</td><td>Display</td>
+</tr>
+<tr>
+<td>Holography</td><td></td><td>Concept</td><td>The science of recording and displaying light fields. A holographic capture differs from a conventional photograph in that it captures an entire light field. In practice, this means recording not just a single color at a pixel site, but a set of values corresponding incident light (color &amp; intensity) from every direction. Holographic display means reconstructing the lightfield at the wavefront level; a subject moving while viewing a hologram will experience shifts in parallax (and occlusion changes) as if they had witnessed the original scene. Holography requires capturing an order of magnitude more data than conventional photography, and the field is still in its infancy. Traditional holography is based on recording laser interference patterns on photographic film. More recently, so-called light field cameras use per-pixel image sensor lens to record incident light at multiple angles. These images can be manipulated computationally to apply effects such as re-focusing in post processing. Holographic videography is in its infancy, and most displays (e.g. Hololens) are not performing wavefront reconstruction but rather using microprisms to inject imagery over the field of view.</td><td>Display</td>
+</tr>
+<tr>
+<td>Horopter</td><td></td><td>Physiology</td><td>In stereoscopic vision, the horopter is informally defined as the set of points in a field of view that appear at the same place in the retina of both eyes. This will vary depending on whether a person is fixated on a nearer or farther object. Objects that are closer or further away than the horopter will appear as "double images": the former is known as a crossed disparity and the latter is known as an uncrossed disparity.</td><td>Display</td>
+</tr>
+<tr>
+<td>Hyperstereo</td><td></td><td>Metric</td><td>Stereoscopic images where the Interaxial distance is larger than the IPD. Makes objects appear smaller than in real-life because of exaggerated parallax.</td><td>	</td>
+</tr>
+<tr>
+<td>Hypostereo</td><td></td><td>Metric</td><td>Stereoscopic images where the Interaxial distance is smaller than the IPD. Makes objects appear larger than in real-life.</td><td>	</td>
+</tr>
+<tr>
+<td>Image-based rendering</td><td></td><td>Technology</td><td>A set of techniques for synthesizing a 3D representation of an object from a series of photographs taken at different angles.</td><td>Produce</td>
+</tr>
+<tr>
+<td>Immersive Audio</td><td></td><td>Audio</td><td>Concept and format for audio with the goal to capture, mix and reproduce 3D Audio, i.e. sound from all directions around a user. Immersive audio can be formated as channels e.g. 7.1+4, scene-based audio (HOA), object-based audio, as well as combinations thereof. MPEG-H 3D Audio has been designed to these formats and their rendering for VR applications.</td><td>Capture, Produce, Render</td>
+</tr>
+<tr>
+<td>Immersiveness</td><td></td><td>Metric</td><td>See "Presence".</td><td>Experience</td>
+</tr>
+<tr>
+<td>Interaxial distance</td><td></td><td>Camera</td><td>The distance between two lenses in a multi-camera array. The interaxial distance determines the amount of parallax captured by this camera pair.</td><td>Capture</td>
+</tr>
+<tr>
+<td>Interocular distance</td><td><mark>IPD</mark></td><td>Physiology</td><td>Synonym for Interpupillary Distance.</td><td>Experience</td>
+</tr>
+<tr>
+<td>Interpupillary distance</td><td>IPD</td><td>Physiology</td><td>The distance between the pupils of a person's eyes. This in turn affects the amount of parallax they perceive. A large discrepancy between the parallax in stereoscopic 360° video and a person's IPD may result in a degraded VR experience.</td><td>Experience</td>
+</tr>
+<tr>
+<td>Judder</td><td></td><td>Concept</td><td>A temporal aliasing artifact caused when converting an animated sequence from one frame rate to another that is not an integral multiple.</td><td>Display</td>
+</tr>
+<tr>
+<td>Latency</td><td></td><td>Metric</td><td>In any system characterized by a processing pipeline, latency measures the time elapsed between entry to and exit from that pipeline. In a VR display system, minimizing latency between user action and video audio presentation is essential for preventing motion sickness. (See motion-to-photon.)</td><td>Interact</td>
+</tr>
+<tr>
+<td>Light detection and ranging</td><td>LIDAR</td><td>Sensor</td><td>A device for creating a depth map by timing the round-trip time of a laser pointed in a specific direction.</td><td>Capture</td>
+</tr>
+<tr>
+<td>Light field</td><td></td><td>Technology</td><td>Conceptually, a vector function describing the light flowing in every direction through every point in space. In photography and VR, a representation of an image from multiple points of view. A light-field camera (also known as a plenoptic camera) captures information about the light field emanating from a scene, including the intensity of light and the direction that the light rays are traveling in space. Light-field technology allows the point of focus and depth of field in a photograph to be selected by the viewer after a scene has been recorded.</td><td>Capture</td>
+</tr>
+<tr>
+<td>Light-field camera</td><td></td><td>Camera</td><td>Generically, any system for capturing a light field. A synonym for plenoptic camera.</td><td>Capture</td>
+</tr>
+<tr>
+<td>Light-field display</td><td></td><td>Display</td><td>A light-field display fully reproduces parallax and occlusions from any position, with positioning constraints being nearly imperceptible.</td><td>Display</td>
+</tr>
+<tr>
+<td>Localization</td><td></td><td>Concept</td><td>Determining the position in 3D space of real objects such as a camera for augmented reality purpose. This localization can provide the position only or the pose (position and orientation) of objects. For example, 3D pose estimation, infrared tracking device, and GPS are solutions to the localization problem providing different precisions.</td><td>Capture</td>
+</tr>
+<tr>
+<td>Location-based entertainment</td><td>LBE</td><td>Technology</td><td>A class of VR experience —usually employing advanced hardware such as haptics— that occurs at a fixed venue outside the home (e.g. a theme park or cinema multiplex).</td><td>Experience</td>
+</tr>
+<tr>
+<td>Magnetometer</td><td></td><td>Sensor</td><td>A device to measure orientation relative to a magnetic field. In conjunction with an accelerometer, this can be used for more accurate head tracking. Many smartphones contain magnetometers.</td><td>Interact</td>
+</tr>
+<tr>
+<td>Mapping</td><td></td><td>Technology</td><td>1) Transforming image data from a planar surface to a two-dimensional plane or three-dimensional object. See Projection. 2) Scanning a 3D object to capture its shape and optical characteristics.</td><td>Capture, Produce</td>
+</tr>
+<tr>
+<td>Markerless</td><td></td><td>Technology</td><td>In VR, refers to camera-based motion tracking systems that do not require the presence of distinguished shapes (markers) in the scene to establish the orientation of the camera.</td><td>Interact</td>
+</tr>
+<tr>
+<td>Massively multiplayer online role-playing game</td><td>MMORPG</td><td>Concept</td><td>A category of multi-player game, usually featuring 3D graphics, that can support potentially millions of players world-wide. The games are hosted on a network of servers, which permits players to interact in a shared world. None of the major MMORPG's have announced support for HMDs, but this is anticipated, and some players have already modified existing games to support this.</td><td>Interact</td>
+</tr>
+<tr>
+<td>Mixed reality</td><td>MR</td><td>Concept</td><td>A hybrid environment that contains elements of both VR and AR.	</td><td></td>
+</tr>
+<tr>
+<td>Model-based 3D</td><td></td><td>Technology</td><td>An abstract representation of the salient characteristics of 3D objects. Currently, polygon meshes are most common representation of geometry. Associating attributes with each polygon such as texture and environment maps allows the object to be rendered realistically.</td><td>Produce, Render</td>
+</tr>
+<tr>
+<td>Motion capture</td><td></td><td>Sensor</td><td>The ability to capture the 3D coordinates of an object (or constituent parts thereof) in real time and at high resolution over a time interval.</td><td>Capture</td>
+</tr>
+<tr>
+<td>Motion sickness</td><td></td><td>Physiology</td><td>A feeling of discomfort (possibly intense) that arises from viewing a VR experience. A major cause is failure of sensory fusion caused by discontinuities between the senses (e.g. long latency responding to head movement). Another cause is content specific (abrupt movements, excessive parallax).</td><td>Experience</td>
+</tr>
+<tr>
+<td>Motion-to-photon</td><td></td><td>Metric</td><td>A specialized latency metric that captures the time elapsed from the time a person wearing a HMD moves their head to when the first frame of video is displayed with the new field of view. A low value is essential for avoiding motion sickness.</td><td>Experience</td>
+</tr>
+<tr>
+<td>Multi-view display</td><td></td><td>Display</td><td>A kind of autostereoscopic display, featuring tens of views. Because of the coarse spacing, a user has to position themselves carefully to obtain an acceptable view.</td><td>Display</td>
+</tr>
+<tr>
+<td>Multi-view video</td><td></td><td>Display</td><td>A system where captured video, upon play back, can be viewed from multiple angles.</td><td>Display</td>
+</tr>
+<tr>
+<td>Nadir</td><td></td><td>Metric</td><td>The point on a celestial sphere antipodal to the Zenith. More generally, the point (or direction) represented by -90° ("South") in any spherical coordinate system. See also "Zenith".</td><td>Capture, Display</td>
+</tr>
+<tr>
+<td>Negative parallax</td><td></td><td>Metric</td><td>In a stereoscopic display system, an object that appears closer to the user than a reference plane (e.g. a screen in a 3D theater) exhibits negative parallax. It results in eyes pointing inwards, and excessive amounts can cause eyestrain.</td><td>Display</td>
+</tr>
+<tr>
+<td>Omnidirectional video</td><td></td><td>Concept</td><td>See 360° video.	</td><td></td>
+</tr>
+<tr>
+<td>Open Source Virtual Reality</td><td>OSVR</td><td>Software</td><td>A open source, cross-platform software framework intended to support HMDs and controllers from multiple vendors. OSVR currently is hosted on Windows, OS/X, Android, and Linux platforms. Separate from the software, there is also a hardware development kit for HMDs known as the Hacker Development Kit.</td><td></td>	
+</tr>
+<tr>
+<td>OpenCL</td><td></td><td>Software</td><td>A cross-platform library for programming GPUs.</td><td>Render</td>
+</tr>
+<tr>
+<td>OpenGL</td><td></td><td>Software</td><td>A low-level cross-platform 3D graphics rendering library. It is the primary 3D API on Android and iOS smartphones, and on OS/X (there is also a Windows implementation).</td><td>Render</td>
+</tr>
+<tr>
+<td>OpenVX: Software</td><td></td><td>Technology</td><td>A cross-platfrom acceleration of computer vision applications for face and gesture tracking, object and scene reconstruction, pose estimation for AR applications, …</td><td>	</td>
+</tr>
+<tr>
+<td>Organic light-emitting diode</td><td>OLED</td><td>Display</td><td>An emissive display technology that is commonly used in smartphones and HMDs. They are characterized by high density, superior contrast, and greater brightness compared to Liquid Crystal displays.</td><td>Display</td>
+</tr>
+<tr>
+<td>Orthostereo</td><td></td><td>Metric</td><td>Stereoscopic images where 1) Interaxial distance is equal to the IPD; and 2) Camera focal length is equal to that of the human eye. Recreates human depth/scale perception	</td><td></td>
+</tr>
+<tr>
+<td>Panoramic single-view video</td><td></td><td>Concept</td><td>Capture or display of monoscopic video with a very wide horizontal field of view and low distortion to create an enhanced perception of "being there." Most commonly this is achieved with multiple cameras that have overlapping fields of view that are stitched into a composite image. However single-camera devices such as slit-scan cameras and fisheye lens have also been used to capture panoramas.</td><td>Capture, Display</td>
+</tr>
+<tr>
+<td>Panoramic stereoscopic video</td><td></td><td>Concept</td><td>Capture or display of stereoscopic video with a very wide horizontal field of view and low distortion to create an enhanced perception of "being there." Most commonly this is achieved with two equal-sized sets of multiple cameras. Each camera in one set is a fixed distance from a corresponding camera in the other (both pointing the same direction), allowing parallax to be directly captured. Cameras within a set have overlapping fields of view that are stitched into a composite image. However other arrangements are possible, e.g. using image-based rendering techniques on a single set of cameras with high overlap to synthesize parallax mathematically.</td><td>Capture, Display</td>
+</tr>
+<tr>
+<td>Parallax</td><td></td><td>Metric</td><td>The change in relative positions of objects when seen from different locations. The magnitude of displacement is directly proportional to the distance between the measuring locations, and inversely proportional to distance from the observation point, which makes it possible to infer distance. Parallax is the basis for stereoscopic vision, and is also used in some autofocus systems. Measuring parallax is the basis of stereoscopic vision, and is used heavily in photogrammetry and image based rendering.</td><td>Capture, Display</td>
+</tr>
+<tr>
+<td>Persistence</td><td></td><td>Metric</td><td>A measurement (typically in milliseconds) that captures the length of time the pixels of a frame are visible. A low value is essential for avoiding motion sickness.</td><td>Display</td>
+</tr>
+<tr>
+<td>Photogrammetry</td><td></td><td>Technology</td><td>In general, the extraction of geometric information from photographs. Many of the techniques have been around for decades. In the context of VR, is usually refers to either recovering 3D coordinates from a series of overlapping photographs, or the extraction of features from non-overlapping photographs for the purpose of creating high-resolution texture maps. Also referred to as Videogrammetry.</td><td>Produce</td>
+</tr>
+<tr>
+<td>Photometric corrections</td><td></td><td>Technology</td><td>A variety of techniques for estimating sources of error in a photometric observation (e.g. positional jitter, temperature) and applying correction factors to achieve a more accurate measurement.</td><td>Produce</td>
+</tr>
+<tr>
+<td>Plato's cave</td><td></td><td>Concept</td><td>The concept that one's perception of reality is limited (distorted) by the senses available to them. Plato describes people confined to a cave and only able to look at a wall illuminated by a fire behind them. Their inferences of reality are based on shadows cast by people and things walking between them and the fire.</td><td>Experience</td>
+</tr>
+<tr>
+<td>Plenoptic camera</td><td></td><td>Camera</td><td>Generically, any system for capturing a light field. The term refers to the mathematical equation used to define a light field. A synonym for light-field camera.</td><td>Capture</td>
+</tr>
+<tr>
+<td>Point cloud</td><td></td><td>Technology</td><td>A method of representing an object by a set points in a 3D coordinate system. The attributes of a point capture the visual appearance of the object at that point. Point clouds are commonly created by 3D scanning hardware.</td><td>Capture</td>
+</tr>
+<tr>
+<td>Polygonal mesh</td><td></td><td>Technology</td><td>A method of representing an object by a set of connected polygons, sharing some edges and vertices. Material properties of the object (such as colors, surface normals, or textures) can be associtated with vertices, edges, and faces. Rendering is the process by which polygon meshes are converted to visible pixels in a display.</td><td>Render</td>
+</tr>
+<tr>
+<td>Positional head tracking</td><td></td><td>Sensor</td><td>Systems that measure the location and orientation of a subject's head. To be usable for VR the measurements must be continuous, in real time, with high accuracy and low latency. Head tracking does not perform eye tracking (where the eyes are looking).</td><td>Interact</td>
+</tr>
+<tr>
+<td>Positive parallax</td><td></td><td>Metric</td><td>In a stereoscopic display system, an object that appears farther from the user than a reference plane (e.g. a screen in a 3D theater) exhibits positive parallax. It results in eyes pointing outwards, and even small amounts amounts can cause eyestrain.</td><td>Display</td>
+</tr>
+<tr>
+<td>Presence</td><td></td><td>Metric</td><td>A subjective measurement of the extent to which a subject is unaware of being immersed in a Virtual Reality experience. Nearly every aspect of a VR system contributes to or detracts from the sensation of Presence, including video, audio, latency, ability to interact with the environment. Synonymous with Immersiveness.</td><td>Experience</td>
+</tr>
+<tr>
+<td>Procedural shader</td><td></td><td>Technology</td><td>A 3D technology that can be thought of as a generalization of texture mapping. Each pixel of a 3D polygon is computed by running a program that draws on a variety of inputs, including but not restricted to a texture map. These calculations are performed by a GPU.</td><td>Render</td>
+</tr>
+<tr>
+<td>Projection</td><td></td><td>Concept</td><td>Representation of a three-dimensional scene as a two-dimensional image. For example, spherical-to-2D projections such as equirectangular and orthographic are used to transform omnidirectional video into rectangular video.</td><td>Produce</td>
+</tr>
+<tr>
+<td>Proprioception</td><td></td><td>Physiology</td><td>The ability of a person to sense the relative position of different parts of their body. This is possible (even with the eyes closed) because of specialized receptors in the muscles, joints, and tendons.</td><td>Experience</td>
+</tr>
+<tr>
+<td>Quad buffering</td><td></td><td>Technology</td><td>The use of two double buffers for stereoscopic displays (see double buffering), one for the left eye and the other one for the right eye. The swap command is applied on both pairs of buffer.</td><td>Display</td>
+</tr>
+<tr>
+<td>Ray casting</td><td></td><td>Interaction</td><td>An indirect interaction technique based on a 3D virtual light ray used to select a virtual object.</td><td>Interact</td>
+</tr>
+<tr>
+<td>Redirected walking</td><td></td><td>Interaction</td><td>Redirected walking allows users to walk through large-scale Immersive Virtual Environments while physically remaining in a reasonable small workspace thanks to a non-linear mapping between user motion in real space and his/her corresponding motion in virtual space.</td><td>Interact</td>
+</tr>
+<tr>
+<td>Registration</td><td></td><td>Technology</td><td>Process of aligning different set of data into a unique coordinate system. For example, Image registration is used by augmented reality technology to perceive virtual and real data as co-located.</td><td>Produce</td>
+</tr>
+<tr>
+<td>Render</td><td></td><td>Concept</td><td>The process of converting between an internal representation of a media essence (e.g. 3D model, sound field) to display hardware (e.g. HMD, speakers). May specifically refer to generating a raster graphics image from 2D and 3D models, textures, light sources, camera views, and more structured in a scene graph defining their relative spatial relationships.</td><td>Render</td>
+</tr>
+<tr>
+<td>Resolution</td><td></td><td>Metric</td><td>The number of pixels per degree of Field of View. This expresses the level of detail that can be reproduced in a HMD.	</td><td>Display</td>
+</tr>
+<tr>
+<td>Rolling shutter effects</td><td></td><td>Technology</td><td></td><td></td>
+</tr>
+<tr>
+<td>Room-scale system</td><td></td><td>Technology</td><td>A VR system allowing people to walk around within a limited area. Also known as "walk-around" VR, such a system must be capable of tracking not only the orientation of the headset but also the location (six coordinates versus three).</td><td>Interact</td>
+</tr>
+<tr>
+<td>Rotoscoping</td><td></td><td>Technology</td><td>A VFX technique for compositing imagery over existing footage. It is now performed by computers, though originally this was achieved through mechanical means. Rotoscoping is very commonly used in post-production workflows, and in VR, non-linear projections such as equirectangular make rotoscoping more difficult, and as a result new plug-ins are being created.</td><td>Produce</td>
+</tr>
+<tr>
+<td>Sensory fusion</td><td></td><td>Physiology</td><td>A measure of how closely the human senses are synchronized. Sensory fusion contributes directly to immersiveness of a visual environment. Discrepancies between different senses (e.g. a lag between what is displayed to the eyes in a HMD and the actual position of the head) is a major source of discomfort and motion sickness.</td><td>Experience</td>
+</tr>
+<tr>
+<td>Simultaneous localization and mapping</td><td>SLAM</td><td>Technology</td><td>Simultaneous localization and mapping combines a 3D motion tracking technique with a structure-from-motion technique by simultaneously updating a 3D map of an unknown environment according to an estimation of a camera pose itself estimated according to this 3D map (chicken-and-egg problem). This technique is widely used by augmented reality SDK for the so-called markerless registration, but this loop has the disadvantage of drifting over time.</td><td>Capture</td>
+</tr>
+<tr>
+<td>Six degrees of freedom</td><td>6DoF</td><td>Concept</td><td>Ability of a viewpoint to change orientation by rotating through three perpendicular axes, often termed pitch, yaw, and roll, and also change position by moving on three perpendicular axes forward/backward (surge), up/down (heave), left/right (sway).</td><td>Display</td>
+</tr>
+<tr>
+<td>Stabilization</td><td></td><td>Technology</td><td>Techniques for reducing loss of resolution in imaging because of camera motion. These can generally be divided into techniques that counteract motion by physically changing the image path to the sensor (optical stabilization), and techniques that counteract motion artifact after the image has been captured (digital stabilization).</td><td>Capture</td>
+</tr>
+<tr>
+<td>Stereoscopic</td><td></td><td>Physiology</td><td>A stereoscopic display system has separate video for each eye in order to create a system of parallax. Many 360° video cameras are monoscopic (each eye is presented with the same video). Stereoscopic capture may be achieved by having two cameras for each viewpoint, or may be synthesized computationally with certain single camera geometries provided every point in the scene is captured by at least two cameras. Matching the parallax of the capture system (i.e. interaxial distance) with human IPD is important for a good VR experience.</td><td>Display</td>
+</tr>
+<tr>
+<td>Stitching</td><td></td><td>Technology</td><td>The process of transforming a set of overlapping videos into a single unified sequence. Stitching is very compute-intensive, and if not done carefully can introduce artifacts such as visible seams, or misalignment of objects caused by misidentification of overlapping features.</td><td>Produce</td>
+</tr>
+<tr>
+<td>Structure from motion</td><td></td><td>Technology</td><td>Process of estimating 3D structures from 3D images sequences. These 3D structures can be sparse (features of interest) or dense (surfaces of real objects). In case of a dense structure, we will talk about 3D reconstruction.</td><td>Capture</td>
+</tr>
+<tr>
+<td>Super-multi-view display</td><td></td><td>Display</td><td>A multi-view display characterized by hundreds of views, which makes the user less aware of having to position themselves correctly.</td><td>Display</td>
+</tr>
+<tr>
+<td>Tactical haptics reactive grip</td><td></td><td>Sensor</td><td>A motion controller that employs haptic feedback that can be used to create the sensation of resistance to motion to guide user actions.</td><td>Experience</td>
+</tr>
+<tr>
+<td>Telenaut</td><td></td><td>Concept</td><td>NASA terminology for a VR system that immerses a person in the environment of another planet.</td><td>	</td>
+</tr>
+<tr>
+<td>Telepresence VR</td><td></td><td>Concept</td><td>A class of VR experience that places a person (or their avatar) into a different location in real-time. It includes the ability to interact with the remote environment.</td><td>Experience</td>
+</tr>
+<tr>
+<td>Tethered HMD</td><td></td><td>Display</td><td>A HMD that is physically connected via cables to a base station (usually a PC).</td><td>Display</td>
+</tr>
+<tr>
+<td>TetraMic</td><td></td><td>Audio</td><td>An Ambisonics sound field capture microphone array featuring four microphones in a tetrahedral arrangement.</td><td>Capture</td>
+</tr>
+<tr>
+<td>Texture mapping	</td><td></td><td>Technology</td><td>A 3D technology for mapping an image (texture) or subset thereof onto the surface a polygon (usually a triangle), and dealing with properly handling rendering it (e.g. perspective correction).</td><td>Produce, Render</td>
+</tr>
+<tr>
+<td>Three degrees of freedom</td><td>3DoF</td><td>Concept</td><td>Ability of a viewpoint to change orientation by rotating through three perpendicular axes, often termed pitch, yaw, and roll, but not change position on those axes.</td><td>Display</td>
+</tr>
+<tr>
+<td>Tone mapping</td><td></td><td>Video</td><td>Techniques for mapping high dynamic-range (and/or wide color-gamut) images to an output device with more limited capabilities.</td><td>Display</td>
+</tr>
+<tr>
+<td>Uncanny valley</td><td></td><td>Physiology</td><td>The perception (by a human) that a rendered CGI object (especially another human) is "unreal" as its quality approaches photographic realism.</td><td>Experience</td>
+</tr>
+<tr>
+<td>Vergence</td><td></td><td>Physiology</td><td>The movement of both eyes to track an object. The result is the object is centered on each retina, and as a corollary each eye is looking in a different direction (e.g. left eye looking rightward and right eye leftward).</td><td>Experience</td>
+</tr>
+<tr>
+<td>Vertigo</td><td></td><td>Physiology</td><td>The sensation of falling caused by either a disruption of the vestibular system or discrepancies between the vestibular and visual/audio senses. Strongly correlated with motion sickness.</td><td>Experience</td>
+</tr>
+<tr>
+<td>Vestibular</td><td></td><td>Physiology</td><td>A specialized part of the human auditory system that captures the sense of balance.</td><td>Experience</td>
+</tr>
+<tr>
+<td>Virtual reality</td><td>VR</td><td>Concept</td><td>New combined definition: A rendered environment overriding human senses (visual, acoustic, tactile, and other) with captured or synthetically generated data, providing an immersive experience to a user who can interact with it in a seemingly real or physical way using special electronic equipment (e.g. head-mounted display, audio rendering, and sensors/actuators). Also called immersive media.	</td><td></td>
+</tr>
+<tr>
+<td>Vision processing unit</td><td></td><td>Technology</td><td>A class of microprocessor designed to accelerate machine vision task <mark>(improperly called Holographic Processing Unit by Microsoft ;-)</mark></td><td>Capture</td>
+</tr>
+<tr>
+<td>Visual effects</td><td>VFX</td><td>Technology</td><td>Any of a large variety of techniques (including animation, matting, compositing) for creating imagery that appears realistic despite incorporating synthetic elements. Because of advances in computer-based tools, most contemporary movies incorporate VFX to some extent, not just the expected genres such as Action or Science Fiction.</td><td>Produce</td>
+</tr>
+<tr>
+<td>Volumetric capture</td><td></td><td>Technology</td><td>A technique that records a subject with multiple cameras (image and depth data) positioned at different perspectives. Image-based rendering techniques are then applied to the videos to construct a high resolution 3D mesh. Each constituent polygon of the mesh is associated with a texture map corresponding to the captured pixel values. This allows an object (or person) to be placed inside an immersive VR environment.</td><td>Capture</td>
+</tr>
+<tr>
+<td>Walk-around system</td><td></td><td>Interaction</td><td>A system that allows a user to move around within a confined space, usually rectangular. Walk-around capability requires measuring the six-tuple position and orientation of the user's head. An example is the HTC Vive. Walk-around capability enables experiences similar to those provided by walk-in-place systems.</td><td>Interact</td>
+</tr>
+<tr>
+<td>Walk-in-place system</td><td></td><td>Interaction</td><td>A system that holds a user's torso in place, allowing it to rotate as the user's feet to walk in any direction on a free-axis moving tread-mill like surface or a low-friction surface, enabling the user to walk through a large-scale immersive virtual environment while physically remaining in place in the real world. An example is Virtuix Omni.</td><td>Interact</td>
+</tr>
+<tr>
+<td>Wand</td><td></td><td>Sensor</td><td>A generic name for controllers with joysticks, buttons, triggers or pads tracked in the 3D space such as the Playstation Move, Vive or Oculus controller as well as the Flystick</td><td>Interact</td>
+</tr>
+<tr>
+<td>Workbench</td><td></td><td>Display</td><td>Device of type “drafting table” made up of one (slanted) or two (horizontal and vertical) displays with a tracking system allowing designing at scale 1:1 virtual prototypes of size generally smaller than 1m3.</td><td>Display</td>
+</tr>
+<tr>
+<td>Zenith</td><td></td><td>Metric</td><td>The highest point on a celestial sphere, antipodal to the Nadir. More generally, the point (or direction) represented by +90° ("North") in any spherical coordinate system. See also "Nadir".</td><td>Capture, Display</td>
+</tr>
+</tbody></table>
+
+
+
+
+
+<h2>Version History</h2>
+<table class="lexKeyTable">
+<thead><tr><th>Date</th><th>Version</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>
+2016-05-06
+</td><td>
+v1
+</td><td>
+Initial version (Paul Jensen, MovieLabs)
+</td></tr>
+<tr><td>
+June to August 2016
+</td><td>
+v2-v5
+</td><td>
+DECE updates
+</td></tr>
+<tr><td>
+2016-09-01
+</td><td>
+v6
+</td><td>
+Added workflow and SDO Ref columns. Added "Intro" and "History" tabs. (Jim Taylor, DECE)
+</td></tr>
+<tr><td>
+2016-09-06
+</td><td>
+v7
+</td><td>
+Added new terms suggested by VR Interest Group members, some of those terms defined, new Category of "Interaction" added
+</td></tr>
+<tr><td>
+2016-09-07
+</td><td>
+v8
+</td><td>
+New terms and definitions added.
+</td></tr>
+<tr><td>
+2016-09-13
+</td><td>
+v9
+</td><td>
+Additional terms and edits. (Paul J)
+</td></tr>
+<tr><td>
+2016-09-16
+</td><td>
+v10
+</td><td>
+Additional terms and edits. Changed "Artifact" category to "Concept". Changed "zzzNuke" category to "[Omit]" and added description. Conformed capitalization. Added Stats tab. (Jim T)
+</td></tr>
+<tr><td>
+2016-09-18
+</td><td>
+v11
+</td><td>
+Additional cleanup and editing, including tagging new terms as Primary or Secondary. (Jim T)
+</td></tr>
+<tr><td>
+2016-09-20
+</td><td>
+v12
+</td><td>
+More terms and definitions. (Paul J)
+</td></tr>
+<tr><td>
+2016-09-21
+</td><td>
+v13
+</td><td>
+Removed "Product" category. Added "Video" category. (DECE) Recategorized some entries as Video. (Jim T) Added/changed Workflow and Core. (Arianne H)
+</td></tr>
+<tr><td>
+2016-09-22
+</td><td>
+v14
+</td><td>
+Input from Seijin Oh. Highlighted open questions in red. (Jim T)
+</td></tr>
+<tr><td>
+2016-09-22
+</td><td>
+v14a
+</td><td>
+<p>Added "Commercial" column. (Jim T)<p>
+<p>Minor grammar/usage fixes. Fixed formatting problems from conversion to Google Sheets. (Jim T)<p>
+</td></tr>
+<tr><td>
+2016-10-06
+</td><td>
+v15
+</td><td>
+Added category definitions. Removed the "people" and "company" categories and associated terms. Renamed file. (Jim T)
+</td></tr>
+<tr><td>
+2016-10-13
+</td><td>
+v15
+</td><td>
+Corrected workflow term for "video" to reference video instead of audio
+</td></tr>
+<tr><td>
+2017-01-04
+</td><td>
+v16
+</td><td>
+Added Contributors tab (Albert K, Jim T). Added definitions for workflow taxonomy (Jim T). Additional definitions and edits (Jim T, Paul J).
+</td></tr>
+</tbody></table>
+</body>
+</html>
