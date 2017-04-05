@@ -32,17 +32,49 @@ table.lexTable tbody tr.hideMe {
 	display:none;
 }
 
-table.lexTable tbody tr.audio, table.LexKeyTable tbody tr td.audio 		{ 	background-color: #ffc000; }
-table.lexTable tbody tr.camera, table.LexKeyTable tbody tr td.camera		{ 	background-color: #8ea8db; }
-table.lexTable tbody tr.concept, table.LexKeyTable tbody tr td.concept 	{ 	background-color: #fff7a8; }
-table.lexTable tbody tr.display, table.LexKeyTable tbody tr td.display		{ 	background-color: #e2efda; }
-table.lexTable tbody tr.interaction, table.LexKeyTable tbody tr td.interaction { 	background-color: #c0e0b3; }
-table.lexTable tbody tr.metric, table.LexKeyTable tbody tr td.metric 		{ 	background-color: #f6befe; }
-table.lexTable tbody tr.physiology, table.LexKeyTable tbody tr td.physiology 	{ 	background-color: #fff2cc; }
-table.lexTable tbody tr.sensor, table.LexKeyTable tbody tr td.sensor		{ 	background-color: #ffe8a9; }
-table.lexTable tbody tr.software, table.LexKeyTable tbody tr td.software	{ 	background-color: #f8f5d2; }
-table.lexTable tbody tr.technology, table.LexKeyTable tbody tr td.technology	{ 	background-color: #ffc7ce; }
-table.lexTable tbody tr.video, table.LexKeyTable tbody tr td.video		{ 	background-color: #c7fbfe; }
+table.lexTable tbody tr.audio, 
+table.LexKeyTable tbody tr td.audio 		
+	{ background-color: #ffc000; }
+	
+table.lexTable tbody tr.camera, 
+table.LexKeyTable tbody tr td.camera		
+	{ background-color: #8ea8db; }
+	
+table.lexTable tbody tr.concept, 
+table.LexKeyTable tbody tr td.concept 	
+	{ background-color: #fff7a8; }
+	
+table.lexTable tbody tr.display, 
+table.LexKeyTable tbody tr td.display		
+	{ background-color: #e2efda; }
+	
+table.lexTable tbody tr.interaction, 
+table.LexKeyTable tbody tr td.interaction 
+	{ background-color: #c0e0b3; }
+	
+table.lexTable tbody tr.metric, 
+table.LexKeyTable tbody tr td.metric 		
+	{ background-color: #f6befe; }
+	
+table.lexTable tbody tr.physiology, 
+table.LexKeyTable tbody tr td.physiology 	
+	{ background-color: #fff2cc; }
+	
+table.lexTable tbody tr.sensor, 
+table.LexKeyTable tbody tr td.sensor
+	{ background-color: #ffe8a9; }
+	
+table.lexTable tbody tr.software, 
+table.LexKeyTable tbody tr td.software	
+	{ background-color: #f8f5d2; }
+	
+table.lexTable tbody tr.technology, 
+table.LexKeyTable tbody tr td.technology
+	{ background-color: #ffc7ce; }
+	
+table.lexTable tbody tr.video, 
+table.LexKeyTable tbody tr td.video
+	{ background-color: #c7fbfe; }
 
 table.list {
 	font-family: 'Raleway', sans-serif;
@@ -52,6 +84,8 @@ table.list {
 	text-align: left;
 }
 table.list tr td:first-child {font-weight:bold;}
+
+a.intRef { text-decoration:none; }
 </style>
 </head>
 <body>
@@ -135,7 +169,7 @@ $(document).ready(function()
 
 <tbody>
 <tr class="concept">
-<td>360° video</td><td></td><td>Concept</td><td>Also known as spherical video, 360° video refers to capturing a very wide field of view (between a hemisphere and a full sphere), usually with multiple lenses whose independent streams are merged through the process of stitching. A key characteristic of 360° video is that it is usually intended to be viewed on a display device such as a tablet or HMD that shows only a subset of the panorama, the selection of which is normally governed by head tracking or device orientation to create an immersive experience. The viewing experience has three degrees of freedom — although the user can control where they look, they have no control over the positioning of the camera. See Panoramic single-view video and Panoramic stereoscopic video.</td><td>Capture, Render</td>
+<td id="360-video">360° video</td><td></td><td>Concept</td><td>Also known as spherical video, 360° video refers to capturing a very wide field of view (between a hemisphere and a full sphere), usually with multiple lenses whose independent streams are merged through the process of stitching. A key characteristic of 360° video is that it is usually intended to be viewed on a display device such as a tablet or <a href="#hmd" class="intref">HMD</a> that shows only a subset of the panorama, the selection of which is normally governed by head tracking or device orientation to create an immersive experience. The viewing experience has three degrees of freedom — although the user can control where they look, they have no control over the positioning of the camera. See <a href="#panoramic-single-view" class="intRef">Panoramic single-view video</a> and <a href="#panoramic-stereoscopic-view" class="intRef">Panoramic stereoscopic video</a>.</td><td>Capture, Render</td>
 </tr>
 <tr class="interaction">
 <td>3D cursor</td><td></td><td>Interaction</td><td>A direct interaction technique based on a 3D cursor which position is mapped according to the user hand according to a linear or non-linear mapping (go-go technique)</td><td>Interact</td>
@@ -147,19 +181,19 @@ $(document).ready(function()
 <td>3D pose estimation</td><td></td><td>Technology</td><td>Determining from a sequence of 2D images acquired by a vision device (camera, depth sensor) the 3D transformations or pose (position and orientation) of real objects or of the camera in a given coordinate system from the real space.</td><td>Capture</td>
 </tr>
 <tr class="sensor">
-<td>Accelerometer</td><td></td><td>Sensor</td><td>A device for detecting acceleration. Usually implemented by sensing change in velocity in the x, y, and z directions relative to some frame of reference (e.g., the object itself or a cubic volume in room-scale VR) to generate an acceleration vector. Found in smartphones and HMDs.</td><td>	Capture, Interact</td>
+<td>Accelerometer</td><td></td><td>Sensor</td><td>A device for detecting acceleration. Usually implemented by sensing change in velocity in the x, y, and z directions relative to some frame of reference (e.g., the object itself or a cubic volume in room-scale VR) to generate an acceleration vector. Found in smartphones and <a href="#hmd" class="intref">HMDs</a>.</td><td>Capture, Interact</td>
 </tr>
 <tr class="physiology">
 <td>Accommodation</td><td></td><td>Physiology</td><td>The ability of a person to focus on objects at different distances. This declines with age, the end stage of which is a condition known as presbyopia.</td><td>Experience</td>
 </tr>
 <tr class="audio">
-<td>Ambisonics</td><td></td><td>Audio</td><td>A system for encoding directional information in a 3D sound field by capturing x-, y-, z-, and omnidirectional components using special microphones. This allows a soundfield to localized when rendered through (e.g.) headphones to match the FOV being displayed on an HMD. Developed in the 1970's in the UK.</td><td>Encode</td>
+<td>Ambisonics</td><td></td><td>Audio</td><td>A system for encoding directional information in a 3D sound field by capturing x-, y-, z-, and omnidirectional components using special microphones. This allows a soundfield to localized when rendered through (e.g.) headphones to match the FOV being displayed on an <a href="#hmd" class="intref">HMD</a>. Developed in the 1970's in the UK.</td><td>Encode</td>
 </tr>
 <tr class="technology">
-<td>Analytics</td><td></td><td>Technology</td><td>In a VR context, analytics is employed to extract insights and construct visualizations such as heat maps, that are based on the input streams received from the user, specifically the position of the HMD, which can be used to infer (approximately) which elements of a VR scene the user is interacting with at a given instant in time.</td><td>Interact</td>
+<td>Analytics</td><td></td><td>Technology</td><td>In a VR context, analytics is employed to extract insights and construct visualizations such as heat maps, that are based on the input streams received from the user, specifically the position of the <a href="#hmd" class="intref">HMD</a>, which can be used to infer (approximately) which elements of a VR scene the user is interacting with at a given instant in time.</td><td>Interact</td>
 </tr>
 <tr class="physiology">
-<td>Astigmatism</td><td></td><td>Physiology</td><td>A type of optical aberration that prevents a person from keeping the entirety of an object in focus at one time, even if all parts are the same distance away. A common manifestation is only being able to focus on the horizontal or vertical arm of a cross (but not both) at the same time. It is an issue with HMDs that don't work with prescription eyeglasses, as there is no simple correction for astigmatism.</td><td>Experience</td>
+<td>Astigmatism</td><td></td><td>Physiology</td><td>A type of optical aberration that prevents a person from keeping the entirety of an object in focus at one time, even if all parts are the same distance away. A common manifestation is only being able to focus on the horizontal or vertical arm of a cross (but not both) at the same time. It is an issue with <a href="#hmd" class="intref">HMDs</a> that don't work with prescription eyeglasses, as there is no simple correction for astigmatism.</td><td>Experience</td>
 </tr>
 <tr class="technology">
 <td>Asynchronous time warp</td><td>ATW</td><td>Technology</td><td>A technique for masking video artifacts caused when the next frame has not finished being rendered at the end of the current frame. Without ATW, this will result in the current frame appearing twice, which the user perceives as a video glitch that undermines immersiveness. With ATW, if the next frame isn't ready the current frame will be warped (affine transform) to approximate the next frame (assuming the scene hasn't changed and the head motion is relatively small). This has been shown to mask the users perception of video glitches in many cases, though success is not guaranteed.</td><td>	Render</td>
@@ -201,7 +235,7 @@ $(document).ready(function()
 <td>CG VR</td><td> </td><td>Concept</td><td> </td><td> </td>
 </tr>
 <tr class="physiology">
-<td>Chromatic aberration</td><td></td><td>Physiology</td><td>A class of visual artifacts caused by light with longer wavelengths being refracted less strongly than light with shorter wavelengths. HMDs containing lenses will cause severe chromatic aberration unless corrected by applying the inverse amount of aberration to the image displayed.</td><td>Experience</td>
+<td>Chromatic aberration</td><td></td><td>Physiology</td><td>A class of visual artifacts caused by light with longer wavelengths being refracted less strongly than light with shorter wavelengths. <a href="#hmd" class="intref">HMDs</a> containing lenses will cause severe chromatic aberration unless corrected by applying the inverse amount of aberration to the image displayed.</td><td>Experience</td>
 </tr>
 <tr class="concept">
 </td><td>Cinematic VR</td><td></td><td>Concept</td><td></td><td>Produce</td>
@@ -231,7 +265,7 @@ $(document).ready(function()
 <td>Depth image-based rendering</td><td>DIBR</td><td>Technology</td><td>A family of techniques for synthesizing a view of a scene (i.e. from a position not captured by a camera) based on one or more reference images that include depth information for each pixel site. A central problem of DIBR is that of disocclusion: the synthesized image may include regions now exposed to view that were not captured in the reference image(s). A variety of methods exist for estimating pixel values for those regions based on localized information and the depth values.</td><td>Render</td>
 </tr>
 <tr class="metric">
-<td>Depth of field</td><td>DOF</td><td>Metric</td><td>In an optical system, the range between the nearest and farthest objects that are in focus. The Depth of Field is positively correlated with the f-stop (higher f-stop results in greater DOF).</td><td>Capture, Render</td>
+<td id="dof">Depth of Field</td><td>DOF</td><td>Metric</td><td>In an optical system, the range between the nearest and farthest objects that are in focus. The Depth of Field is positively correlated with the f-stop (higher f-stop results in greater DOF).</td><td>Capture, Render</td>
 </tr>
 <tr class="concept">
 <td>Diegetic Sound</td><td></td><td>Concept</td><td>Sound elements that are understood to originate from within a scene being depicted in a cinematic, theatrical, or VR experience. They may be off-screen, but if so would be audible to the characters in the scene. Dialog spoken by a character would be an example of Diegetic Sound. Conversely, sound track music heard only by the audience would be an example of non-Diegetic sound. Also known as "Diegetic Audio" or "Source Music".</td><td>Produce</td>
@@ -240,7 +274,7 @@ $(document).ready(function()
 <td>Diopter</td><td></td><td>Physiology</td><td>A measurement of how strongly a lens bends light.</td><td>Capture</td>
 </tr>
 <tr class="technology">
-<td>Direct Mode</td><td></td><td>Technology</td><td>Driver technology that allows an HMD to be treated as an independent display that VR applications can render directly to. Normally all displays attached to a PC are assumed to be part of a larger virtual display; this is undesirable because having the window system involved is a source of avoidable latency.</td><td>Display</td>
+<td>Direct Mode</td><td></td><td>Technology</td><td>Driver technology that allows an <a href="#hmd" class="intref">HMD</a> to be treated as an independent display that VR applications can render directly to. Normally all displays attached to a PC are assumed to be part of a larger virtual display; this is undesirable because having the window system involved is a source of avoidable latency.</td><td>Display</td>
 </tr>
 <tr class="software">
 <td>Direct3D</td><td>D3D</td><td>Software</td><td>A low-level 3D graphics rendering library, created by Microsoft for Windows platforms.</td><td>Render</td>
@@ -255,13 +289,13 @@ $(document).ready(function()
 <td>Equirectangular</td><td></td><td>Video</td><td>A format for 360° video that is based on projecting a spherical image onto a surrounding cylinder (similar to a Mercator projection in cartography). The benefit of the format is the cylinder can be represented as a rectangle, allowing reuse of existing rectangle-based video codecs. The principle disadvantage is that more pixels are used to represent polar regions, which typically contain the least interesting content to the viewer (e.g. sky, ground).</td><td>Produce</td>
 </tr>
 <tr class="technology">
-<td>Eye tracking</td><td></td><td>Technology</td><td>(See Gaze tracking)</td><td>Interact</td>
+<td id="eye-tracking">Eye tracking</td><td></td><td>Technology</td><td>(See <a href="#gaze-tracking" class="intRef">Gaze tracking</a>)</td><td>Interact</td>
 </tr>
 <tr class="metric">
-<td>f-stop</td><td>f/n</td><td>Metric</td><td>The f-stop is the ratio between the focal length and the diameter of the aperture through which light enters the lens.	</td><td>Capture</td>
+<td>f-stop</td><td>f/n</td><td>Metric</td><td>The f-stop is the ratio between the focal length and the diameter of the aperture through which light enters the lens.</td><td>Capture</td>
 </tr>
 <tr class="metric">
-<td>Field of view</td><td>FOV</td><td>Metric</td><td>The angle formed by the left and right edges of the viewing area of an HMD. There is a tradeoff between the Field of View (higher is better) and Resolution (which is inversely proportional).</td><td>Display</td>
+<td id="fov">Field of view</td><td>FOV</td><td>Metric</td><td>The angle formed by the left and right edges of the viewing area of an <a href="#hmd" class="intref">HMD</a>. There is a tradeoff between the Field of View (higher is better) and Resolution (which is inversely proportional).</td><td>Display</td>
 </tr>
 <tr class="concept">
 <td>First-person View</td><td>FPV</td><td>Concept</td><td>A view from the perspective of an individual, with the video and audio representing what a person would experience. Also refers to a method of remote control (e.g. of a vehicle, drone, etc.) where the control interface presents a view from the perspective of the device being controlled, often referred to as a Remote Person View (RPV).</td><td>Capture, Display</td>
@@ -276,22 +310,22 @@ $(document).ready(function()
 <td>Frames per second</td><td>FPS</td><td>Metric</td><td>In a video track, the rate at which frames are encoded. In a display system, the rate at which frames of video are presented to the user. The persistence of the video system determines what portion of a frame the image is actually visible. In VR systems, high frame rates (e.g. 90–120 Hz) are required to avoid motion sickness.</td><td>Display</td>
 </tr>
 <tr class="display">
-<td>Free-viewpoint video</td><td></td><td>Display</td><td>A video that a user may view from an arbitrary position and direction By comparison, in a 360° video only the direction can be selected on playback; the location is determined by the camera at the moment that frame was captured.</td><td>Display</td>
+<td>Free-viewpoint video</td><td></td><td>Display</td><td>A video that a user may view from an arbitrary position and direction By comparison, in a <a href="#360-video" class="intRef">360° video</a> only the direction can be selected on playback; the location is determined by the camera at the moment that frame was captured.</td><td>Display</td>
 </tr>
 <tr class="metric">
 <td>Gamma correction</td><td>&gamma;</td><td>Metric</td><td>An empirical change to correct for the human visual system's non-linear response to changes in luminance.</td><td>Display</td>
 </tr>
 <tr class="technology">
-<td>Gaze tracking</td><td></td><td>Technology</td><td>Any of a variety of techniques for gathering detailed information on the movement of the eyes of a viewer while in an immersive VR experience. This is not the same as assuming the center of an HMD is always where a user is looking. The most common data collected are the direction vectors for each eye (known as pupillometry or gaze tracking), and small involuntary motions known as saccades. More sophisticated systems also may capture the diameter of the pupil, which can be indicative of ambient lighting or internal emotional state. Current HMDs do not have eye tracking capability, though this may change in the future. A few current HMDs can be retrofitted with eye tracking hardware.</td><td>Interact</td>
+<td id="gaze-tracking">Gaze tracking</td><td></td><td>Technology</td><td>Any of a variety of techniques for gathering detailed information on the movement of the eyes of a viewer while in an immersive VR experience. This is not the same as assuming the center of an <a href="#hmd" class="intRef">HMD</a> is always where a user is looking. The most common data collected are the direction vectors for each eye (known as pupillometry or gaze tracking), and small involuntary motions known as saccades. More sophisticated systems also may capture the diameter of the pupil, which can be indicative of ambient lighting or internal emotional state. Current <a href="#hmd" class="intref">HMDs</a> do not have eye tracking capability, though this may change in the future. A few current <a href="#hmd" class="intref">HMDs</a> can be retrofitted with eye tracking hardware.</td><td>Interact</td>
 </tr>
 <tr class="video">
 <td>Global illumination</td><td></td><td>Video</td><td>In 3D graphics, global illumination seeks to realistically light a scene by accounting for not just direct light sources, but indirect lighting caused by objects recursively reflecting light between each other. These calculations are extremely compute intensive, and generally require ray-tracing techniques that can't be done in real-time, though GPUs help a great deal.</td><td>Produce</td>
 </tr>
 <tr class="technology">
-<td>Graphics Pipeline</td><td></td><td>Technology</td><td>A sequence of computational steps to create a raster graphics image from an internal 3D representation, including the following: transformation from local coordinate system to camera(s) coordinate system(s); camera projection of the elements of the 3D scene according to the intrinsic parameter; view frustum clipping; rasterization; texturing; lighting; fragment shading. On recent graphics hardware, some of these steps are implemented by programmable shaders, including: pixel or fragment shaders (relative to the pixel of the output raster image); vertex shaders (to modify properties relative to input 3D models' vertices); geometry shaders (to generate new primitives such as 3D points, lines, triangles, etc); tessellation shaders (to subdivide a mesh to generate on-the-fly levels of detail). User interactions, physics, and management of object behavior are not part of the rendering process. These computations update the scene graph in a pre-rendering step of a global loop. Although the distortion correction adapted to each HMD lens can be done through a dedicated pixel shaders, the time-warp process is done in a post-rendering step.</td><td>Render</td>
+<td>Graphics Pipeline</td><td></td><td>Technology</td><td>A sequence of computational steps to create a raster graphics image from an internal 3D representation, including the following: transformation from local coordinate system to camera(s) coordinate system(s); camera projection of the elements of the 3D scene according to the intrinsic parameter; view frustum clipping; rasterization; texturing; lighting; fragment shading. On recent graphics hardware, some of these steps are implemented by programmable shaders, including: pixel or fragment shaders (relative to the pixel of the output raster image); vertex shaders (to modify properties relative to input 3D models' vertices); geometry shaders (to generate new primitives such as 3D points, lines, triangles, etc); tessellation shaders (to subdivide a mesh to generate on-the-fly levels of detail). User interactions, physics, and management of object behavior are not part of the rendering process. These computations update the scene graph in a pre-rendering step of a global loop. Although the distortion correction adapted to each <a href="#hmd" class="intref">HMD</a> lens can be done through a dedicated pixel shaders, the time-warp process is done in a post-rendering step.</td><td>Render</td>
 </tr>
 <tr class="technology">
-<td>Graphics processing unit</td><td>GPU</td><td>Technology</td><td>A collection of processors that can speed up algorithms by performing computation in parallel. The computations are not independent but conform loosely to the SIMD (single-instruction multiple data) paradigm. Typically the same program (set of instructions) is performed independently by each GPU core, but the input parameters can vary programmatically by a series of iterators which can be used to index tabular arrays. GPUs were originally developed in 3D graphics accelerators to perform shading (per-pixel) calculations, but since then have evolved to be usable with a larger class of applications. GPUs are sometimes referred to as GPGPUs (general-purpose GPUs) when applied to non-graphics computations.</td><td>Render</td>
+<td id="gpu">Graphics processing unit</td><td>GPU</td><td>Technology</td><td>A collection of processors that can speed up algorithms by performing computation in parallel. The computations are not independent but conform loosely to the SIMD (single-instruction multiple data) paradigm. Typically the same program (set of instructions) is performed independently by each GPU core, but the input parameters can vary programmatically by a series of iterators which can be used to index tabular arrays. GPUs were originally developed in 3D graphics accelerators to perform shading (per-pixel) calculations, but since then have evolved to be usable with a larger class of applications. GPUs are sometimes referred to as GPGPUs (general-purpose GPUs) when applied to non-graphics computations.</td><td>Render</td>
 </tr>
 <tr class="sensor">
 <td>Gyroscope</td><td></td><td>Sensor</td><td>A class of device capable of detecting and measuring changes in the orientation (roll, pitch, and yaw) of an object. Originally implemented as a a rapidly spinning disk attached to a cage with three degrees of freedom of motion, new versions use long fiber loops and have no moving parts.</td><td>Interact</td>
@@ -300,10 +334,10 @@ $(document).ready(function()
 <td>Haptic</td><td></td><td>Concept</td><td>Literally, relating to the sense of touch. In a VR context. Refers to a class of input controllers that can provide programmatic feedback to a user, usually based on the location of the controller in the scene. Haptic feedback may be realistic (e.g. to simulate the physical effect of interacting with an object) or just to provide cues to the user that they should perform (or stop performing) an action when certain criteria are met.</td><td>Interact</td>
 </tr>
 <tr class="sensor">
-<td>Head tracking</td><td></td><td>Sensor</td><td>A system for capturing the orientation of an HMD. This is not the same as gaze tracking. The HMD direction is needed to determine the viewport into a spherical image to display. In walk-around systems it is necessary to determine the location of the HMD as well as its orientation (see Positional head tracking).</td><td>Interact</td>
+<td>Head tracking</td><td></td><td>Sensor</td><td>A system for capturing the orientation of an <a href="#hmd" class="intref">HMD</a>. This is not the same as gaze tracking. The <a href="#hmd" class="intref">HMD</a> direction is needed to determine the viewport into a spherical image to display. In walk-around systems it is necessary to determine the location of the <a href="#hmd" class="intref">HMD</a> as well as its orientation (see <a href="#positional-head-tracking" class="intref">Positional head tracking</a>).</td><td>Interact</td>
 </tr>
 <tr class="display">
-<td>Head-mounted display</td><td>HMD</td><td>Display</td><td>A class of display device characterized by: high frame rate; high-resolution display; a lens system to make the display viewable to a person; and a head tracking system to report back the current orientation of the display.</td><td>Display</td>
+<td id="hmd">Head-mounted display</td><td>HMD</td><td>Display</td><td>A class of display device characterized by: high frame rate; high-resolution display; a lens system to make the display viewable to a person; and a head tracking system to report back the current orientation of the display.</td><td>Display</td>
 </tr>
 <tr class="audio">
 <td>Head-related transfer function</td><td>HRTF</td><td>Audio</td><td>The HRTF is measured at a spot near the entrance of each person's ear. It is parameterized by a direction (e.g. lat-long) and frequency; the value is the actual intensity of the sound received. The HRTF is required to produce binaural (spatially accurate) sound.</td><td>	Produce, Render</td>
@@ -342,7 +376,7 @@ $(document).ready(function()
 <td>Immersive Audio</td><td></td><td>Audio</td><td>Concept and format for audio with the goal to capture, mix and reproduce 3D Audio, i.e. sound from all directions around a user. Immersive audio can be formated as channels e.g. 7.1+4, scene-based audio (HOA), object-based audio, as well as combinations thereof. MPEG-H 3D Audio has been designed to these formats and their rendering for VR applications.</td><td>Capture, Produce, Render</td>
 </tr>
 <tr class="metric">
-<td>Immersiveness</td><td></td><td>Metric</td><td>See "Presence".</td><td>Experience</td>
+<td id="immersiveness">Immersiveness</td><td></td><td>Metric</td><td>See "<a href="#presence" class="intRef">Presence</a>".</td><td>Experience</td>
 </tr>
 <tr class="camera">
 <td>Interaxial distance</td><td></td><td>Camera</td><td>The distance between two lenses in a multi-camera array. The interaxial distance determines the amount of parallax captured by this camera pair.</td><td>Capture</td>
@@ -387,7 +421,7 @@ $(document).ready(function()
 <td>Markerless</td><td></td><td>Technology</td><td>In VR, refers to camera-based motion tracking systems that do not require the presence of distinguished shapes (markers) in the scene to establish the orientation of the camera.</td><td>Interact</td>
 </tr>
 <tr class="concept">
-<td>Massively multiplayer online role-playing game</td><td>MMORPG</td><td>Concept</td><td>A category of multi-player game, usually featuring 3D graphics, that can support potentially millions of players world-wide. The games are hosted on a network of servers, which permits players to interact in a shared world. None of the major MMORPG's have announced support for HMDs, but this is anticipated, and some players have already modified existing games to support this.</td><td>Interact</td>
+<td>Massively multiplayer online role-playing game</td><td>MMORPG</td><td>Concept</td><td>A category of multi-player game, usually featuring 3D graphics, that can support potentially millions of players world-wide. The games are hosted on a network of servers, which permits players to interact in a shared world. None of the major MMORPG's have announced support for <a href="#hmd" class="intref">HMDs</a>, but this is anticipated, and some players have already modified existing games to support this.</td><td>Interact</td>
 </tr>
 <tr class="concept">
 <td>Mixed reality</td><td>MR</td><td>Concept</td><td>A hybrid environment that contains elements of both VR and AR.	</td><td></td>
@@ -402,7 +436,7 @@ $(document).ready(function()
 <td>Motion sickness</td><td></td><td>Physiology</td><td>A feeling of discomfort (possibly intense) that arises from viewing a VR experience. A major cause is failure of sensory fusion caused by discontinuities between the senses (e.g. long latency responding to head movement). Another cause is content specific (abrupt movements, excessive parallax).</td><td>Experience</td>
 </tr>
 <tr class="metric">
-<td>Motion-to-photon</td><td></td><td>Metric</td><td>A specialized latency metric that captures the time elapsed from the time a person wearing a HMD moves their head to when the first frame of video is displayed with the new field of view. A low value is essential for avoiding motion sickness.</td><td>Experience</td>
+<td>Motion-to-photon</td><td></td><td>Metric</td><td>A specialized latency metric that captures the time elapsed from the time a person wearing a <a href="#hmd" class="intref">HMD</a> moves their head to when the first frame of video is displayed with the new field of view. A low value is essential for avoiding motion sickness.</td><td>Experience</td>
 </tr>
 <tr class="display">
 <td>Multi-view display</td><td></td><td>Display</td><td>A kind of autostereoscopic display, featuring tens of views. Because of the coarse spacing, a user has to position themselves carefully to obtain an acceptable view.</td><td>Display</td>
@@ -420,7 +454,7 @@ $(document).ready(function()
 <td>Omnidirectional video</td><td></td><td>Concept</td><td>See 360° video.	</td><td></td>
 </tr>
 <tr class="software">
-<td>Open Source Virtual Reality</td><td>OSVR</td><td>Software</td><td>A open source, cross-platform software framework intended to support HMDs and controllers from multiple vendors. OSVR currently is hosted on Windows, OS/X, Android, and Linux platforms. Separate from the software, there is also a hardware development kit for HMDs known as the Hacker Development Kit.</td><td></td>	
+<td>Open Source Virtual Reality</td><td>OSVR</td><td>Software</td><td>A open source, cross-platform software framework intended to support <a href="#hmd" class="intref">HMDs</a> and controllers from multiple vendors. OSVR currently is hosted on Windows, OS/X, Android, and Linux platforms. Separate from the software, there is also a hardware development kit for <a href="#hmd" class="intref">HMDs</a> known as the Hacker Development Kit.</td><td></td>	
 </tr>
 <tr class="software">
 <td>OpenCL</td><td></td><td>Software</td><td>A cross-platform library for programming GPUs.</td><td>Render</td>
@@ -432,16 +466,16 @@ $(document).ready(function()
 <td>OpenVX: Software</td><td></td><td>Technology</td><td>A cross-platfrom acceleration of computer vision applications for face and gesture tracking, object and scene reconstruction, pose estimation for AR applications, …</td><td>	</td>
 </tr>
 <tr class="display">
-<td>Organic light-emitting diode</td><td>OLED</td><td>Display</td><td>An emissive display technology that is commonly used in smartphones and HMDs. They are characterized by high density, superior contrast, and greater brightness compared to Liquid Crystal displays.</td><td>Display</td>
+<td>Organic light-emitting diode</td><td>OLED</td><td>Display</td><td>An emissive display technology that is commonly used in smartphones and <a href="#hmd" class="intref">HMDs</a>. They are characterized by high density, superior contrast, and greater brightness compared to Liquid Crystal displays.</td><td>Display</td>
 </tr>
 <tr class="metric">
 <td>Orthostereo</td><td></td><td>Metric</td><td>Stereoscopic images where 1) Interaxial distance is equal to the IPD; and 2) Camera focal length is equal to that of the human eye. Recreates human depth/scale perception	</td><td></td>
 </tr>
 <tr class="concept">
-<td>Panoramic single-view video</td><td></td><td>Concept</td><td>Capture or display of monoscopic video with a very wide horizontal field of view and low distortion to create an enhanced perception of "being there." Most commonly this is achieved with multiple cameras that have overlapping fields of view that are stitched into a composite image. However single-camera devices such as slit-scan cameras and fisheye lens have also been used to capture panoramas.</td><td>Capture, Display</td>
+<td id="panoramic-single-view">Panoramic single-view video</td><td></td><td>Concept</td><td>Capture or display of monoscopic video with a very wide horizontal field of view and low distortion to create an enhanced perception of "being there." Most commonly this is achieved with multiple cameras that have overlapping fields of view that are stitched into a composite image. However single-camera devices such as slit-scan cameras and fisheye lens have also been used to capture panoramas.</td><td>Capture, Display</td>
 </tr>
 <tr class="concept">
-<td>Panoramic stereoscopic video</td><td></td><td>Concept</td><td>Capture or display of stereoscopic video with a very wide horizontal field of view and low distortion to create an enhanced perception of "being there." Most commonly this is achieved with two equal-sized sets of multiple cameras. Each camera in one set is a fixed distance from a corresponding camera in the other (both pointing the same direction), allowing parallax to be directly captured. Cameras within a set have overlapping fields of view that are stitched into a composite image. However other arrangements are possible, e.g. using image-based rendering techniques on a single set of cameras with high overlap to synthesize parallax mathematically.</td><td>Capture, Display</td>
+<td id="panoramic-stereoscopic-view">Panoramic stereoscopic video</td><td></td><td>Concept</td><td>Capture or display of stereoscopic video with a very wide horizontal field of view and low distortion to create an enhanced perception of "being there." Most commonly this is achieved with two equal-sized sets of multiple cameras. Each camera in one set is a fixed distance from a corresponding camera in the other (both pointing the same direction), allowing parallax to be directly captured. Cameras within a set have overlapping fields of view that are stitched into a composite image. However other arrangements are possible, e.g. using image-based rendering techniques on a single set of cameras with high overlap to synthesize parallax mathematically.</td><td>Capture, Display</td>
 </tr>
 <tr class="metric">
 <td>Parallax</td><td></td><td>Metric</td><td>The change in relative positions of objects when seen from different locations. The magnitude of displacement is directly proportional to the distance between the measuring locations, and inversely proportional to distance from the observation point, which makes it possible to infer distance. Parallax is the basis for stereoscopic vision, and is also used in some autofocus systems. Measuring parallax is the basis of stereoscopic vision, and is used heavily in photogrammetry and image based rendering.</td><td>Capture, Display</td>
@@ -468,16 +502,16 @@ $(document).ready(function()
 <td>Polygonal mesh</td><td></td><td>Technology</td><td>A method of representing an object by a set of connected polygons, sharing some edges and vertices. Material properties of the object (such as colors, surface normals, or textures) can be associtated with vertices, edges, and faces. Rendering is the process by which polygon meshes are converted to visible pixels in a display.</td><td>Render</td>
 </tr>
 <tr class="sensor">
-<td>Positional head tracking</td><td></td><td>Sensor</td><td>Systems that measure the location and orientation of a subject's head. To be usable for VR the measurements must be continuous, in real time, with high accuracy and low latency. Head tracking does not perform eye tracking (where the eyes are looking).</td><td>Interact</td>
+<td id="positional-head-tracking">Positional head tracking</td><td></td><td>Sensor</td><td>Systems that measure the location and orientation of a subject's head. To be usable for VR the measurements must be continuous, in real time, with high accuracy and low latency. Head tracking does not perform eye tracking (where the eyes are looking).</td><td>Interact</td>
 </tr>
 <tr class="metric">
 <td>Positive parallax</td><td></td><td>Metric</td><td>In a stereoscopic display system, an object that appears farther from the user than a reference plane (e.g. a screen in a 3D theater) exhibits positive parallax. It results in eyes pointing outwards, and even small amounts amounts can cause eyestrain.</td><td>Display</td>
 </tr>
 <tr class="metric">
-<td>Presence</td><td></td><td>Metric</td><td>A subjective measurement of the extent to which a subject is unaware of being immersed in a Virtual Reality experience. Nearly every aspect of a VR system contributes to or detracts from the sensation of Presence, including video, audio, latency, ability to interact with the environment. Synonymous with Immersiveness.</td><td>Experience</td>
+<td id="presence">Presence</td><td></td><td>Metric</td><td>A subjective measurement of the extent to which a subject is unaware of being immersed in a Virtual Reality experience. Nearly every aspect of a VR system contributes to or detracts from the sensation of Presence, including video, audio, latency, ability to interact with the environment. Synonymous with <a href="#immersiveness" class="intRef">Immersiveness</a>.</td><td>Experience</td>
 </tr>
 <tr class="technology">
-<td>Procedural shader</td><td></td><td>Technology</td><td>A 3D technology that can be thought of as a generalization of texture mapping. Each pixel of a 3D polygon is computed by running a program that draws on a variety of inputs, including but not restricted to a texture map. These calculations are performed by a GPU.</td><td>Render</td>
+<td>Procedural shader</td><td></td><td>Technology</td><td>A 3D technology that can be thought of as a generalization of texture mapping. Each pixel of a 3D polygon is computed by running a program that draws on a variety of inputs, including but not restricted to a texture map. These calculations are performed by a <a href="#gpu" class="intRef">GPU</a>.</td><td>Render</td>
 </tr>
 <tr class="concept">
 <td>Projection</td><td></td><td>Concept</td><td>Representation of a three-dimensional scene as a two-dimensional image. For example, spherical-to-2D projections such as equirectangular and orthographic are used to transform omnidirectional video into rectangular video.</td><td>Produce</td>
@@ -498,10 +532,10 @@ $(document).ready(function()
 <td>Registration</td><td></td><td>Technology</td><td>Process of aligning different set of data into a unique coordinate system. For example, Image registration is used by augmented reality technology to perceive virtual and real data as co-located.</td><td>Produce</td>
 </tr>
 <tr class="concept">
-<td>Render</td><td></td><td>Concept</td><td>The process of converting between an internal representation of a media essence (e.g. 3D model, sound field) to display hardware (e.g. HMD, speakers). May specifically refer to generating a raster graphics image from 2D and 3D models, textures, light sources, camera views, and more structured in a scene graph defining their relative spatial relationships.</td><td>Render</td>
+<td>Render</td><td></td><td>Concept</td><td>The process of converting between an internal representation of a media essence (e.g. 3D model, sound field) to display hardware (e.g. <a href="#hmd" class="intref">HMD</a>, speakers). May specifically refer to generating a raster graphics image from 2D and 3D models, textures, light sources, camera views, and more structured in a scene graph defining their relative spatial relationships.</td><td>Render</td>
 </tr>
 <tr class="metric">
-<td>Resolution</td><td></td><td>Metric</td><td>The number of pixels per degree of Field of View. This expresses the level of detail that can be reproduced in a HMD.</td><td>Display</td>
+<td>Resolution</td><td></td><td>Metric</td><td>The number of pixels per degree of Field of View. This expresses the level of detail that can be reproduced in a <a href="#hmd" class="intref">HMD</a>.</td><td>Display</td>
 </tr>
 <tr class="technology">
 <td>Rolling shutter effects</td><td></td><td>Technology</td><td></td><td></td>
@@ -513,7 +547,7 @@ $(document).ready(function()
 <td>Rotoscoping</td><td></td><td>Technology</td><td>A VFX technique for compositing imagery over existing footage. It is now performed by computers, though originally this was achieved through mechanical means. Rotoscoping is very commonly used in post-production workflows, and in VR, non-linear projections such as equirectangular make rotoscoping more difficult, and as a result new plug-ins are being created.</td><td>Produce</td>
 </tr>
 <tr class="physiology">
-<td>Sensory fusion</td><td></td><td>Physiology</td><td>A measure of how closely the human senses are synchronized. Sensory fusion contributes directly to immersiveness of a visual environment. Discrepancies between different senses (e.g. a lag between what is displayed to the eyes in a HMD and the actual position of the head) is a major source of discomfort and motion sickness.</td><td>Experience</td>
+<td>Sensory fusion</td><td></td><td>Physiology</td><td>A measure of how closely the human senses are synchronized. Sensory fusion contributes directly to immersiveness of a visual environment. Discrepancies between different senses (e.g. a lag between what is displayed to the eyes in a <a href="#hmd" class="intref">HMD</a> and the actual position of the head) is a major source of discomfort and motion sickness.</td><td>Experience</td>
 </tr>
 <tr class="technology">
 <td>Simultaneous localization and mapping</td><td>SLAM</td><td>Technology</td><td>Simultaneous localization and mapping combines a 3D motion tracking technique with a structure-from-motion technique by simultaneously updating a 3D map of an unknown environment according to an estimation of a camera pose itself estimated according to this 3D map (chicken-and-egg problem). This technique is widely used by augmented reality SDK for the so-called markerless registration, but this loop has the disadvantage of drifting over time.</td><td>Capture</td>
@@ -546,7 +580,7 @@ $(document).ready(function()
 <td class="concept">Telepresence VR</td><td></td><td>Concept</td><td>A class of VR experience that places a person (or their avatar) into a different location in real-time. It includes the ability to interact with the remote environment.</td><td>Experience</td>
 </tr>
 <tr class="display">
-<td>Tethered HMD</td><td></td><td>Display</td><td>A HMD that is physically connected via cables to a base station (usually a PC).</td><td>Display</td>
+<td>Tethered HMD</td><td></td><td>Display</td><td>A <a href="#hmd" class="intref">HMD</a> that is physically connected via cables to a base station (usually a PC).</td><td>Display</td>
 </tr>
 <tr class="audio">
 <td>TetraMic</td><td></td><td>Audio</td><td>An Ambisonics sound field capture microphone array featuring four microphones in a tetrahedral arrangement.</td><td>Capture</td>
