@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.vr-if.org/lexicon-1"
+	xmlns:tns="http://www.vr-if.org/lexicon-1"
+	xmlns="http://www.w3.org/2001/XMLSchema">
+	
+<element name="lexicon" type="tns:lexiconType"/>
+
+<complexType name="lexiconType">
+	<sequence>
+    <element name="version" type="string"/>
+		<element name="category" type="tns:categoryType" minOccurs="0"/>
+		<element name="workflow" type="tns:workflowType" minOccurs="0"/>
+		<element name="definition" type="tns:definitionType" minOccurs="0"/>
+	</sequence>
+</complexType>
+	
+	
+<complexType name="categoryType">
+	<simpleContent>
+		<extension base="string">
+			<attribute name="id" type="string" use="required"/>
+			<attribute name="label" type="string" use="required"/>
+			<attribute name="color" type="string" use="optional"/>
+		</extension>	
+	</simpleContent>
+</complexType>
+<complexType name="workflowType">
+	<simpleContent>
+		<extension base="string">
+			<attribute name="id" type="string" use="required"/>
+			<attribute name="label" type="string" use="required"/>
+		</extension>	
+	</simpleContent>
+</complexType>
+
+
+<complexType name="definitionType">
+  <sequence>
+    <element name="workflow" type="tns:workflowRefType" minOccurs="0"/>
+    <element name="description" type="string"/>
+  </sequence>
+	<attribute name="id" type="string" use="required"/>
+	<attribute name="label" type="string" use="required"/>
+	<attribute name="category" type="string" use="required"/>
+	<attribute name="abbreviation" type="string" use="optional"/>
+  <attribute name="state" type="tns:definitionStateType" use="optional" default="inuse"/>
+</complexType>
+
+<complexType name="workflowRefType">
+	<attribute name="value" type="string" use="required"/>
+</complexType>
+
+  <simpleType name="definitionStateType">
+    <restriction base="string">
+      <enumeration value="draft"/>
+      <enumeration value="inuse"/>
+      <enumeration value="deprecated"/>
+      <enumeration value="retured"/>
+    </restriction>
+  </simpleType>  
+</schema>

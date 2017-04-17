@@ -1,0 +1,74 @@
+table.lexKeyTable {
+	font-family: 'Raleway', sans-serif;
+	background-color: #CDCDCD;
+	margin:10px 0pt 15px;
+	width: 100%;
+	text-align: left;
+}
+table.lexKeyTable thead tr th, table.lexKeyTable tfoot tr th {
+	background-color: #e6EEEE;
+	border: 1px solid #FFF;
+	padding: 4px;
+}
+table.lexKeyTable tbody td {
+	color: #3D3D3D;
+	padding: 4px; 
+	background-color: #FFF;
+	vertical-align: top;
+}
+
+table.lexTable tbody tr.hideMe {
+	display:none;
+}
+
+table.lexTable tbody tr.audio, 
+table.lexKeyTable tbody tr td.audio 		
+	{ background-color: #ffc000; }
+	
+table.lexTable tbody tr.camera, 
+table.lexKeyTable tbody tr td.camera		
+	{ background-color: #8ea8db; }
+	
+table.lexTable tbody tr.concept, 
+table.lexKeyTable tbody tr td.concept 	
+	{ background-color: #fff7a8; }
+	
+table.lexTable tbody tr.display, 
+table.lexKeyTable tbody tr td.display		
+	{ background-color: #e2efda; }
+	
+table.lexTable tbody tr.interaction, 
+table.lexKeyTable tbody tr td.interaction 
+	{ background-color: #c0e0b3; }
+	
+table.lexTable tbody tr.metric, 
+table.lexKeyTable tbody tr td.metric 		
+	{ background-color: #f6befe; }
+	
+table.lexTable tbody tr.physiology, 
+table.lexKeyTable tbody tr td.physiology 	
+	{ background-color: #fff2cc; }
+	
+table.lexTable tbody tr.sensor, 
+table.lexKeyTable tbody tr td.sensor
+	{ background-color: #ffe8a9; }
+	
+table.lexTable tbody tr.software, 
+table.lexKeyTable tbody tr td.software	
+	{ background-color: #f8f5d2; }
+	
+table.lexTable tbody tr.technology, 
+table.lexKeyTable tbody tr td.technology
+	{ background-color: #ffc7ce; }
+	
+table.lexTable tbody tr.video, 
+table.lexKeyTable tbody tr td.video
+	{ background-color: #c7fbfe; }
+
+table.list {
+	font-family: 'Raleway', sans-serif;
+	background-color: #FFF;
+	margin:10px 0pt 15px;
+	width: 100%;
+	text-align: left;
+}

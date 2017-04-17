@@ -1,0 +1,25 @@
+<lexicon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.vr-if.org/lexicon-1"
+	xsi:schemaLocation="http://www.vr-if.org/lexicon-1 vrif-lexicon.xsd">
+  <version>1.0</version> 
+  <category id="audio" label="Audio" color="#ffc000">Technology or device specifically related to audio.</category>
+  <category id="technology" label="Technology" color="#ffc7ce">General technical knowledge or its application.</category>
+  
+  <workflow id="capture" label="Capture">Convert an input signal into digital format. Includes cameras, microphones, sensors, and real-time video stitching.</workflow>
+  <workflow id="render" label="Render">Generate an audio and video image in real time. Includes compositing from multiple sources, rendering audio and rasterizing video from 2D or 3D models, and extracting an image for a point of view.</workflow>
+
+
+  <definition id="360video" label="360&#xB0; video" category="concept">
+    <workflow value="capture"/>
+    <workflow value="render"/>
+    <description>Also known as spherical video, 360&#xB0; video refers to capturing a very wide field of view (between a hemisphere and a full sphere), usually with multiple lenses whose independent streams are merged through the process of stitching. A key characteristic of 360&#xB0; video is that it is usually intended to be viewed on a display device such as a tablet or HMD that shows only a subset of the panorama, the selection of which is normally governed by head tracking or device orientation to create an immersive experience. The viewing experience has three degrees of freedom — although the user can control where they look, they have no control over the positioning of the camera. See Panoramic single-view video and Panoramic stereoscopic video.
+    </description>
+  </definition>
+
+
+  <definition id="atw" label="Asynchronous time warp" category="technology" abbreviation="ATW" state="inuse">
+    <workflow value="render"/>
+    <description>A technique for masking video artifacts caused when the next frame has not finished being rendered at the end of the current frame. Without ATW, this will result in the current frame appearing twice, which the user perceives as a video glitch that undermines immersiveness. With ATW, if the next frame isn't ready the current frame will be warped (affine transform) to approximate the next frame (assuming the scene hasn't changed and the head motion is relatively small). This has been shown to mask the users perception of video glitches in many cases, though success is not guaranteed.</description>
+  </definition>
+
+</lexicon>
