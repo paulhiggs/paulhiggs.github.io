@@ -1,0 +1,3 @@
+[submodule "codec-string"]
+	path = codec-string
+	url = https://github.com/paulhiggs/codec-string
