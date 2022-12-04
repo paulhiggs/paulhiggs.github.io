@@ -1,0 +1,134 @@
+<html>
+<head>
+<title>Routing via OpenVPN with TP-Link OMADA</title>
+<style>
+table {
+	caption-side: top;
+}	
+table caption {
+	font-weight: bold;
+	padding-top: 6px;
+	padding-bottom: 6px 
+}
+
+table.alignment {
+    border-spacing: 0;
+    border-collapse:  collapse;
+	border: 0px none transparent;
+}
+.alignment td {
+    border-spacing: 0;
+    border-collapse:  collapse;
+	border: 0px none transparent;
+}
+
+table.simple {
+    border-spacing: 0;
+    border-collapse:  collapse;
+    border-bottom:  3px solid #005a9c;
+	border-top:  3px solid #005a9c;
+	border-left:  3px solid #005a9c;
+	border-right:  3px solid #005a9c;
+    margin-left:auto; 
+    margin-right:auto;
+	font-size: 90%;
+	vertical-align: top;
+	margin-bottom: 12pt;
+}
+
+.simple th {
+    background: #E0E0E0;
+    color:  black;
+    padding:    3px 5px;
+/*    text-align: left; */
+	font-family: sans-serif;
+}
+
+.simple th[scope="row"] {
+    background: inherit;
+    color:  inherit;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+.simple td {
+    padding:    3px 10px;
+    border-top: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	vertical-align: top;
+/*	text-align: left; */
+	font-family: sans-serif;
+}
+
+.simple td p:first-child { margin-top: 0em; }
+.simple td p:last-child { margin-bottom: 0em; }
+
+.simple td ol:only-child { padding-left: 10px; margin-top: 0em; margin-bottom: 0em; }
+.simple td ul:only-child { padding-left: 10px; margin-top: 0em; margin-bottom: 0em; }
+
+.simple td ul:last-child { margin-bottom: 0em; }
+
+.simple caption {
+	caption-side: top;
+	font-weight: bold;
+}
+
+.first-nowrap tr td:first-child {
+	white-space:nowrap;	
+}
+
+figure {
+	text-align: center;
+}
+
+figcaption  { 
+	font-weight: bold;
+	text-align: center; 
+	padding-top: 6px;
+	padding-bottom: 6px 
+}
+</style>
+</head>
+<body>
+<h1>A configuration of TP-Link Omada devices to offer wireless connections to different countries.</h1>
+<h2>Requirements</h2>
+<p>My basic requirements were (while living in the UK)
+<ul>
+<li>Have local internet access for all the day-to-day things (including IOT)</li>
+<li>Have a VPN back to the USA for some "geo-constrained" web sites</li>
+<li>Have a VPN back to New Zealand for some specific work related items</li> 
+</p>
+<p>So the overall schematic was this...</p>
+<figure>
+<image src="schematic.jpg" width="60%"/>
+</figure>
+<table class="simple">
+<caption>Hardware and software versions</caption>
+<tr><th>Device</th><th>Hardware version</th><th>Software version</th></tr>
+<tr><td>EAP225</td><td>v3.0</td><td>5.0.9</td></tr>
+<tr><td>EAP23-Wall</td><td>v1.0</td><td>3.1.0</td></tr>
+<tr><td>TL-SG2210P</td><td>v5.0</td><td>5.0.4</td></tr>
+<tr><td>ER7206</td><td>v1.0</td><td>1.2.3</td></tr>
+<tr><td>OC200</td><td>1.0</td><td>5.6.4</td></tr>
+</table>
+<p> This means 3 Wi-Fi SSIDS (on the same channels), the UK SSID is attached to the untagged LAN, while USA and New Zealand go to VLANS</p>
+<h2>VLANs</h2>
+<p>First we create the VLAN, in this case for USA I use VLAN tag 10</p>
+<figure>
+<image src="1.vlan.jpg" width="60%"/>
+</figure>
+<p>Note that each VLAN needs its own IP interface and I also provide a set of IP addresses. Each of the VLANs (USA and NewZealand) need different VLAN ids and IP address ranges.</p>
+<h2>VPNs</h2>
+<p>Now we need to create an OpenVPN client for each VLAN. I use VyprVPN but any service provider should work.</p>
+<figure>
+<image src="2.vpn.jpg" width="60%"/>
+</figure>
+<p>Make sure that the only the Local Network (VLAN) for this destination is selected</p>
+<h2>SSIDs</h2>
+<p>Finally, create  WiFi SSID for wach destination and make sure that it is 'attached' to the VLAN</p>
+<figure>
+<image src="3.wifi.jpg" width="60%"/>
+</figure>
+<p>Thats all there is to it... Switching between Wifi networks will make your device appear in different locations</p>
+</body>
+</html>
